@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/xani/src/my/ee/powermgr/powermgmt.sch</source>
+    <date>Fri 05 May 2017 02:50:38 CEST</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>powermgmt.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Power out/" tstamps="/5908DC66/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>powerout.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC1">
+      <value>74HC4094_RevA_23Aug2012</value>
+      <footprint>Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm</footprint>
+      <libsource lib="Symbols_ICs-Diskrete_RevD10" part="74HC4094_RevA_23Aug2012"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58642F14</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>CONN_01X06</value>
+      <footprint>Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590BB7CA</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>CONN_01X06</value>
+      <footprint>Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590BBDF2</tstamp>
+    </comp>
+    <comp ref="IC2">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908AE3E</tstamp>
+    </comp>
+    <comp ref="IC3">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C36A</tstamp>
+    </comp>
+    <comp ref="IC4">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C56F</tstamp>
+    </comp>
+    <comp ref="IC5">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C5D1</tstamp>
+    </comp>
+    <comp ref="IC6">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C8C6</tstamp>
+    </comp>
+    <comp ref="IC7">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C8E7</tstamp>
+    </comp>
+    <comp ref="IC8">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C908</tstamp>
+    </comp>
+    <comp ref="IC9">
+      <value>AP24x1</value>
+      <footprint>Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm</footprint>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="diode-inc-ic" part="AP24x1"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908C929</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_01X16</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_MC-G_16x3.50mm_Angled</footprint>
+      <libsource lib="conn" part="CONN_01X16"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>5908CEDA</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>CONN_01X02</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_GMSTBVA-G_02x7.62mm_Vertical</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>590BC6B8</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>CONN_01X02</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_GMSTBVA-G_02x7.62mm_Vertical</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>590BC6F5</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>1N4001</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <libsource lib="diode" part="1N4001"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>590BE27D</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>590BE500</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4001</value>
+      <footprint>LEDs:LED_D5.0mm</footprint>
+      <libsource lib="diode" part="1N4001"/>
+      <sheetpath names="/Power out/" tstamps="/5908DC66/"/>
+      <tstamp>590BE6C6</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="diode" part="1N4001">
+      <aliases>
+        <alias>1N4002</alias>
+        <alias>1N4003</alias>
+        <alias>1N4004</alias>
+        <alias>1N4005</alias>
+        <alias>1N4006</alias>
+        <alias>1N4007</alias>
+        <alias>BA157</alias>
+        <alias>BA158</alias>
+        <alias>BA159</alias>
+      </aliases>
+      <description>50V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+        <fp>D*DO?204AL*</fp>
+        <fp>D*SOD81*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">Diodes_THT:D_DO-41_SOD81_Horizontal_RM10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Symbols_ICs-Diskrete_RevD10" part="74HC4094_RevA_23Aug2012">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">74HC4094_RevA_23Aug2012</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Strobe" type="input"/>
+        <pin num="2" name="DATA" type="input"/>
+        <pin num="3" name="Clock" type="input"/>
+        <pin num="4" name="QP0" type="output"/>
+        <pin num="5" name="QP1" type="output"/>
+        <pin num="6" name="QP2" type="output"/>
+        <pin num="7" name="QP3" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="QS1" type="output"/>
+        <pin num="10" name="QS2" type="output"/>
+        <pin num="11" name="QP7" type="output"/>
+        <pin num="12" name="QP6" type="output"/>
+        <pin num="13" name="QP5" type="output"/>
+        <pin num="14" name="QP4" type="output"/>
+        <pin num="15" name="Enable" type="input"/>
+        <pin num="16" name="Vcc" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="diode-inc-ic" part="AP24x1">
+      <description>AP2401/AP2411 Single-channel high-side power switch</description>
+      <docs>http://www.diodes.com/datasheets/AP24x1.pdf</docs>
+      <footprints>
+        <fp>SOIC8</fp>
+        <fp>MSOP8</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">AP24x1</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="IN" type="power_in"/>
+        <pin num="3" name="IN" type="power_in"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="FLG" type="output"/>
+        <pin num="6" name="OUT" type="power_in"/>
+        <pin num="7" name="OUT" type="power_out"/>
+        <pin num="8" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector, single row, 01x02, pin header</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector, single row, 01x06, pin header</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X16">
+      <description>Connector, single row, 01x16, pin header</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P11" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="diode-inc-ic">
+      <uri>/home/xani/src/os/kicad-library/library/diode-inc-ic.lib</uri>
+    </library>
+    <library logical="diode">
+      <uri>/home/xani/src/os/kicad-library/library/diode.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/home/xani/src/os/kicad-library/library/device.lib</uri>
+    </library>
+    <library logical="Symbols_ICs-Diskrete_RevD10">
+      <uri>/home/xani/src/os/kicad-library/library/contrib_symbols_dl1eic/Symbols_ICs-Diskrete_RevD10.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/home/xani/src/os/kicad-library/library/conn.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="VCC">
+      <node ref="IC1" pin="16"/>
+      <node ref="J2" pin="1"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(IC1-Pad1)">
+      <node ref="J1" pin="3"/>
+      <node ref="IC1" pin="1"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="3" name="Net-(IC1-Pad3)">
+      <node ref="J1" pin="5"/>
+      <node ref="IC1" pin="3"/>
+      <node ref="J2" pin="5"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="P1" pin="14"/>
+      <node ref="P1" pin="6"/>
+      <node ref="IC4" pin="1"/>
+      <node ref="P1" pin="12"/>
+      <node ref="P1" pin="10"/>
+      <node ref="P1" pin="8"/>
+      <node ref="IC2" pin="1"/>
+      <node ref="P1" pin="4"/>
+      <node ref="IC3" pin="1"/>
+      <node ref="P1" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J3" pin="2"/>
+      <node ref="P1" pin="16"/>
+      <node ref="IC9" pin="1"/>
+      <node ref="IC1" pin="8"/>
+      <node ref="J1" pin="6"/>
+      <node ref="IC6" pin="1"/>
+      <node ref="IC8" pin="1"/>
+      <node ref="IC5" pin="1"/>
+      <node ref="IC7" pin="1"/>
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="5" name="Net-(IC1-Pad15)">
+      <node ref="IC1" pin="15"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="6" name="Net-(IC1-Pad2)">
+      <node ref="J1" pin="4"/>
+      <node ref="IC1" pin="2"/>
+    </net>
+    <net code="7" name="Net-(IC1-Pad10)">
+      <node ref="IC1" pin="10"/>
+    </net>
+    <net code="8" name="ctrl_out2">
+      <node ref="IC4" pin="4"/>
+      <node ref="IC1" pin="6"/>
+    </net>
+    <net code="9" name="ctrl_out1">
+      <node ref="IC3" pin="4"/>
+      <node ref="IC1" pin="5"/>
+    </net>
+    <net code="10" name="ctrl_out0">
+      <node ref="IC2" pin="4"/>
+      <node ref="IC1" pin="4"/>
+    </net>
+    <net code="11" name="ctrl_out4">
+      <node ref="IC6" pin="4"/>
+      <node ref="IC1" pin="14"/>
+    </net>
+    <net code="12" name="ctrl_out5">
+      <node ref="IC7" pin="4"/>
+      <node ref="IC1" pin="13"/>
+    </net>
+    <net code="13" name="ctrl_out6">
+      <node ref="IC8" pin="4"/>
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="14" name="ctrl_out7">
+      <node ref="IC1" pin="11"/>
+      <node ref="IC9" pin="4"/>
+    </net>
+    <net code="15" name="Net-(IC1-Pad9)">
+      <node ref="J2" pin="4"/>
+      <node ref="IC1" pin="9"/>
+    </net>
+    <net code="16" name="ctrl_out3">
+      <node ref="IC5" pin="4"/>
+      <node ref="IC1" pin="7"/>
+    </net>
+    <net code="18" name="/Power out/out_pwr2">
+      <node ref="P1" pin="5"/>
+      <node ref="IC4" pin="7"/>
+      <node ref="IC4" pin="6"/>
+    </net>
+    <net code="19" name="/Power out/out_pwr1">
+      <node ref="IC3" pin="6"/>
+      <node ref="IC3" pin="7"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="20" name="/Power out/out_pwr4">
+      <node ref="IC6" pin="7"/>
+      <node ref="IC6" pin="6"/>
+      <node ref="P1" pin="9"/>
+    </net>
+    <net code="21" name="OVERLOAD">
+      <node ref="IC3" pin="5"/>
+      <node ref="IC6" pin="5"/>
+      <node ref="IC9" pin="5"/>
+      <node ref="IC2" pin="5"/>
+      <node ref="IC5" pin="5"/>
+      <node ref="IC8" pin="5"/>
+      <node ref="IC7" pin="5"/>
+      <node ref="IC4" pin="5"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="22" name="/Power out/out_pwr3">
+      <node ref="P1" pin="7"/>
+      <node ref="IC5" pin="6"/>
+      <node ref="IC5" pin="7"/>
+    </net>
+    <net code="23" name="Net-(D1-Pad1)">
+      <node ref="D2" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="24" name="/Power out/out_pwr0">
+      <node ref="IC2" pin="7"/>
+      <node ref="P1" pin="1"/>
+      <node ref="IC2" pin="6"/>
+    </net>
+    <net code="25" name="/Power out/out_pwr7">
+      <node ref="P1" pin="15"/>
+      <node ref="IC9" pin="7"/>
+      <node ref="IC9" pin="6"/>
+    </net>
+    <net code="26" name="/Power out/out_pwr6">
+      <node ref="IC8" pin="7"/>
+      <node ref="IC8" pin="6"/>
+      <node ref="P1" pin="13"/>
+    </net>
+    <net code="27" name="VPWR">
+      <node ref="J4" pin="1"/>
+      <node ref="J3" pin="1"/>
+      <node ref="IC9" pin="2"/>
+      <node ref="IC9" pin="3"/>
+      <node ref="D1" pin="2"/>
+      <node ref="IC7" pin="3"/>
+      <node ref="IC3" pin="2"/>
+      <node ref="IC7" pin="2"/>
+      <node ref="IC3" pin="3"/>
+      <node ref="IC8" pin="2"/>
+      <node ref="IC5" pin="2"/>
+      <node ref="IC5" pin="3"/>
+      <node ref="IC6" pin="2"/>
+      <node ref="IC6" pin="3"/>
+      <node ref="D2" pin="2"/>
+      <node ref="IC4" pin="2"/>
+      <node ref="IC8" pin="3"/>
+      <node ref="IC4" pin="3"/>
+      <node ref="IC2" pin="3"/>
+      <node ref="IC2" pin="2"/>
+    </net>
+    <net code="28" name="/Power out/out_pwr5">
+      <node ref="P1" pin="11"/>
+      <node ref="IC7" pin="7"/>
+      <node ref="IC7" pin="6"/>
+    </net>
+    <net code="29" name="Net-(IC6-Pad8)">
+      <node ref="IC6" pin="8"/>
+    </net>
+    <net code="30" name="Net-(IC5-Pad8)">
+      <node ref="IC5" pin="8"/>
+    </net>
+    <net code="31" name="Net-(IC7-Pad8)">
+      <node ref="IC7" pin="8"/>
+    </net>
+    <net code="32" name="Net-(IC2-Pad8)">
+      <node ref="IC2" pin="8"/>
+    </net>
+    <net code="33" name="Net-(IC4-Pad8)">
+      <node ref="IC4" pin="8"/>
+    </net>
+    <net code="34" name="Net-(IC3-Pad8)">
+      <node ref="IC3" pin="8"/>
+    </net>
+    <net code="35" name="Net-(IC9-Pad8)">
+      <node ref="IC9" pin="8"/>
+    </net>
+    <net code="36" name="Net-(IC8-Pad8)">
+      <node ref="IC8" pin="8"/>
+    </net>
+  </nets>
+</export>
