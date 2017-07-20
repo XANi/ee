@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/xani/src/my/ee/powermgr/powermgmt.sch)
-    (date "Sat 17 Jun 2017 19:55:24 CEST")
+    (date "Thu 20 Jul 2017 04:19:12 CEST")
     (tool "Eeschema 4.0.5+dfsg1-4")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -46,7 +46,7 @@
       (tstamp 590BBDF2))
     (comp (ref IC2)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -54,7 +54,7 @@
       (tstamp 5908AE3E))
     (comp (ref IC3)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -62,7 +62,7 @@
       (tstamp 5908C36A))
     (comp (ref IC4)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -70,7 +70,7 @@
       (tstamp 5908C56F))
     (comp (ref IC5)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -78,7 +78,7 @@
       (tstamp 5908C5D1))
     (comp (ref IC6)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -86,7 +86,7 @@
       (tstamp 5908C8C6))
     (comp (ref IC7)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -94,7 +94,7 @@
       (tstamp 5908C8E7))
     (comp (ref IC8)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
@@ -102,7 +102,7 @@
       (tstamp 5908C908))
     (comp (ref IC9)
       (value AP24x1)
-      (footprint Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm)
+      (footprint Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm)
       (fields
         (field (name Manufacturer) "Diodes Incorporated"))
       (libsource (lib diode-inc-ic) (part AP24x1))
