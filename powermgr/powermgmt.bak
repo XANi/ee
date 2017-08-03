@@ -181,7 +181,7 @@ U 1 1 590BB7CA
 P 2650 900
 F 0 "J2" H 2650 1250 50  0000 C CNN
 F 1 "OUT" V 2750 900 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 2650 900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 2650 900 50  0001 C CNN
 F 3 "" H 2650 900 50  0001 C CNN
 	1    2650 900 
 	1    0    0    -1  
@@ -237,7 +237,7 @@ U 1 1 590BBDF2
 P 700 900
 F 0 "J1" H 700 1250 50  0000 C CNN
 F 1 "IN" V 800 900 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 700 900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 700 900 50  0001 C CNN
 F 3 "" H 700 900 50  0001 C CNN
 	1    700  900 
 	-1   0    0    -1  
