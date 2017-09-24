@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo avrdude  -p atmega32 -c stk500v2  -P avrdoper -U flash:w:main.hex

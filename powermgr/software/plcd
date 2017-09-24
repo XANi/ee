@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+$tty="/dev/ttyUSB1";
+$CLR="\023";
+$L1="\021";
+$L2="\022";
+
+$|=1;
+
+while(sleep 1) {
+    ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+    $year += 1900;
+    ++$mon;
+    open(LCD, '>', $tty);
+    print LCD $CLR . $hour . ':' . $min . ':' . $sec .
+	$L2 . $year . '-' . $mon . '-' . $mday;
+    close(LCD);
+}
