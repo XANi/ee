@@ -36,7 +36,7 @@
 #define SR_STROBE 4
 #define SR_ENA 5
 
-#define SLOWSTART_DELAY_MS 100
+#define SLOWSTART_DELAY_MS 5000
 
 static volatile int16_t ticks_till_sleep=1000;
 
