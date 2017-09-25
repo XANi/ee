@@ -34,7 +34,7 @@
 /* Prototypes */
 void initUART(void);
 uint8_t getByte(void);
-void putByte(unsigned char data);
+void writeByte(unsigned char data);
 void writeString(char *str);
 const char* readString(void);
 

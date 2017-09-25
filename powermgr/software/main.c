@@ -35,6 +35,10 @@
 #define SR_DATA 3
 #define SR_STROBE 4
 #define SR_ENA 5
+// how long each clock tick takes. Increase if there is a lot of capacity on line
+#define SR_EDGE_DELAY_US 10
+
+//#define DEBUG
 
 #define SLOWSTART_DELAY_MS 5000
 
@@ -53,9 +57,9 @@ void shiftOut(uint8_t data)
 			cbi(PORTD,SR_DATA);
 		}
 		sbi(PORTD,SR_CLK);
-		_delay_ms(10);
+		_delay_us(SR_EDGE_DELAY_US);
 		cbi(PORTD,SR_CLK);
-		_delay_ms(10);
+		_delay_us(SR_EDGE_DELAY_US);
 		data=data<<1;
 		
 	}
@@ -63,12 +67,14 @@ void shiftOut(uint8_t data)
 
 void shiftStrobe(void) {
 	sbi(SR_PORT,SR_STROBE);
-	_delay_ms(1);
+	_delay_us(SR_EDGE_DELAY_US);
 	cbi(SR_PORT,SR_STROBE);
-	_delay_ms(1);
+	_delay_us(SR_EDGE_DELAY_US);
 }
 void ledToggle(void) {
+#ifdef DEBUG
 	tbi(PORTB,5);
+#endif
 }
 
 void bootSequence(void) {
@@ -81,6 +87,7 @@ void bootSequence(void) {
 		out = (out<<1) + 1;
 		writeByte('.');
 		writeByte(i + 0x30);
+		_delay_ms(SLOWSTART_DELAY_MS);
 	}
 	writeString("\n");
 }
@@ -123,8 +130,6 @@ int main(void) {
 	PCICR |= (1 << PCIE2);     // set PCIE2 to enable PCMSK2 scan
 	PCMSK2 |= (1 << PCINT16);   // set PCINT16 to trigger an interrupt on state change
 	while(1) {
-		ledToggle();
-		cbi(PORTB,5);
 		// SLEEP_MODE_IDLE / SLEEP_MODE_ADC / SLEEP_MODE_PWR_SAVE / SLEEP_MODE_STANDBY / SLEEP_MODE_PWR_DOWN
 		// need clock for USART
 		set_sleep_mode(SLEEP_MODE_IDLE);
