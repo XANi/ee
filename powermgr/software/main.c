@@ -38,6 +38,10 @@
 // how long each clock tick takes. Increase if there is a lot of capacity on line
 #define SR_EDGE_DELAY_US 10
 
+#define FAN_PORT PORTB
+#define FAN_PORT_DDR DDRB
+#define FAN_PORT_PIN 1
+
 //#define DEBUG
 
 #define SLOWSTART_DELAY_MS 5000
@@ -91,6 +95,27 @@ void bootSequence(void) {
 	}
 	writeString("\n");
 }
+void bootFan(void) {
+	writeString("enabling fan\n");
+	sbi(FAN_PORT_DDR,FAN_PORT_PIN);
+	sbi(FAN_PORT,FAN_PORT_PIN);
+}
+
+void bootFanPWM(void) {
+	// set TOP to 16bit
+	ICR1 = 0xFFFF;
+
+	// set PWM duty cycle (~20%(
+	OCR1A = 0x0050;
+	TCCR1A |= (1 << COM1A1);
+
+        // 9bit fast pwm
+	TCCR1A |= (1 << WGM11);
+	TCCR1B |= (1 << WGM12);
+	// START the timer with no prescaler
+	TCCR1B |= (1 << CS10);
+
+}
 
 ISR(USART_RX_vect)
 {
@@ -123,7 +148,9 @@ int main(void) {
 	shiftStrobe();
 	// and enable
 	sbi(SR_PORT,SR_ENA);
+	bootFan();
 	bootSequence();
+	bootFanPWM();
 	// enable UART interrupt
 	UCSR0B |= (1 << RXCIE0);
 	sei();
