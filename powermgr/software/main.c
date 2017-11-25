@@ -45,7 +45,7 @@
 
 //#define DEBUG
 
-#define SLOWSTART_DELAY_MS 5000
+#define SLOWSTART_DELAY_MS 5 //000
 
 uint8_t out = 0b00000001;
 
@@ -121,8 +121,64 @@ void bootFanPWM(void) {
 
 ISR(USART_RX_vect)
 {
-	writeString("gotcha\n");
-	while(!getByte()){};
+	char b = getByte();
+	writeByte(b);
+	if (b == '\n') {
+		stateReset();
+		return;
+	}
+	if (smState == STATE_INIT && (b == 'H' || b == 'h')) {
+		displayHelp();
+		stateReset();
+		return;
+	}
+	if (smState == STATE_INIT && (b == 'C' || b == 'c')) {
+		smState = STATE_WAIT_FOR_CMD;
+		return;
+	}
+	if (smState == STATE_INIT &&  b == ':' ) {
+		return;
+	}
+	if (smState == STATE_WAIT_FOR_CMD && (b == 'P' || b == 'p')) {
+		smState = STATE_CMD_ON;
+		return;
+	}
+	if (smState == STATE_WAIT_FOR_CMD && (b == 'S' || b == 's')) {
+		smState = STATE_CMD_OFF;
+		return;
+	}
+	if (smState == STATE_WAIT_FOR_CMD &&  b == ':' ) {
+		return;
+	}
+	if ((smState == STATE_CMD_ON || smState == STATE_CMD_OFF ) &&  b == ':' ) {
+		return;
+	}
+	if ((smState == STATE_CMD_ON || smState == STATE_CMD_OFF ) && (b < 48 || b > 48+7 )) {
+		badRangeError();
+		stateReset();
+		return;
+	}
+	if (smState == STATE_CMD_ON) {
+		uint8_t portNo = b - 48;
+		writeString("\nturning on ");
+		sbi(out,portNo);
+		writeByte(b);
+		writeString("\n");
+		stateReset();
+		return;
+	}
+	if (smState == STATE_CMD_OFF) {
+		uint8_t portNo = b - 48;
+		writeString("\nturning off ");
+		cbi(out,portNo);
+		writeByte(b);
+		writeString("\n");
+		stateReset();
+		return;
+	}
+	displayHelp();
+	stateReset();
+	return;
 }
 
 // this will trigger once when we get back from sleep
@@ -171,66 +227,15 @@ int main(void) {
 	PCICR |= (1 << PCIE2);     // set PCIE2 to enable PCMSK2 scan
 	PCMSK2 |= (1 << PCINT16);   // set PCINT16 to trigger an interrupt on state change
 	while(1) {
-		cli();
-		char b = getByte();
-		if (b == '\n') {
-			stateReset();
-			continue;
-		}
-		if (smState == STATE_INIT && (b == 'H' || b == 'h')) {
-			displayHelp();
-			stateReset();
-			continue;
-		}
-		if (smState == STATE_INIT && (b == 'C' || b == 'c')) {
-			char next = getByte();
-			if (next == ':') {
-				smState = STATE_WAIT_FOR_CMD;
-				continue;
-			} else {
-				invalidCmd();
-				stateReset();
-				continue;
-			}
-		}
-		if (smState == STATE_WAIT_FOR_CMD && (b == 'P' || b == 'p')) {
-			char next = getByte();
-			if (next == ':') {
-				smState = STATE_CMD_ON;
-				continue;
-			} else {
-				invalidCmd();
-				stateReset();
-				continue;
-			}
-		}
-		if (smState == STATE_WAIT_FOR_CMD && (b == 'S' || b == 's')) {
-			char next = getByte();
-			if (next == ':') {
-				smState = STATE_CMD_OFF;
-				continue;
-			} else {
-				invalidCmd();
-				stateReset();
-				continue;
-			}
-		}
-		if (smState == STATE_CMD_ON) {
-			writeString("\nturning on ");
-			writeByte(b);
-			writeString("\n");
-			stateReset();
-		}
-		if (smState == STATE_CMD_OFF) {
-			writeString("\nturning off ");
-			writeByte(b);
-			writeString("\n");
-			stateReset();
-		}
-		
+		_delay_ms(100);
+		shiftOut(out);
+		shiftStrobe();
+		ledToggle();
 	}
-
 }
 
 
 
+void badRangeError() {
+	writeString("input should be in range of 0-7");
+}
