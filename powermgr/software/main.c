@@ -16,6 +16,7 @@
 #define _BAUD 57600
 
 #include "lib/uart.h"
+#include "lib/state.h"
 //calculate UBRR value
 #define UBRRVAL ((F_CPU/(BAUDRATE*16UL))-1)
 
@@ -46,6 +47,9 @@
 
 #define SLOWSTART_DELAY_MS 5000
 
+uint8_t out = 0b00000001;
+
+
 static volatile int16_t ticks_till_sleep=1000;
 
 void shiftOut(uint8_t data)
@@ -65,7 +69,6 @@ void shiftOut(uint8_t data)
 		cbi(PORTD,SR_CLK);
 		_delay_us(SR_EDGE_DELAY_US);
 		data=data<<1;
-		
 	}
 }
 
@@ -83,7 +86,6 @@ void ledToggle(void) {
 
 void bootSequence(void) {
 	writeString("Running boot sequence");
-	uint8_t out = 0b00000001;
 	for(uint8_t i=0;i<8;i++) {
 		shiftOut(out);
 		shiftStrobe();
@@ -119,7 +121,6 @@ void bootFanPWM(void) {
 
 ISR(USART_RX_vect)
 {
-	ticks_till_sleep=1000;
 	writeString("gotcha\n");
 	while(!getByte()){};
 }
@@ -134,6 +135,19 @@ ISR(PCINT2_vect)
 	sei();
 
 
+}
+
+void displayHelp() {
+	writeString("\nHelp:\n");
+	writeString("  H - display help:\n");
+	writeString("  C - command:\n");
+	writeString("    -- socket number goes 0-7 --\n");
+	writeString("    C:P:0: - power-on socket 0\n");
+	writeString("    C:S:0: - shut down socket 0\n");
+}
+
+void invalidCmd() {
+	writeString("\nInvalid cmd. Press H for help\n");
 }
 
 int main(void) {
@@ -157,24 +171,66 @@ int main(void) {
 	PCICR |= (1 << PCIE2);     // set PCIE2 to enable PCMSK2 scan
 	PCMSK2 |= (1 << PCINT16);   // set PCINT16 to trigger an interrupt on state change
 	while(1) {
-		// SLEEP_MODE_IDLE / SLEEP_MODE_ADC / SLEEP_MODE_PWR_SAVE / SLEEP_MODE_STANDBY / SLEEP_MODE_PWR_DOWN
-		// need clock for USART
-		set_sleep_mode(SLEEP_MODE_IDLE);
-		sleep_enable();
-		sleep_bod_disable();
-		sei();
-		PCMSK2 |= (1 << PCINT16);
-		while (ticks_till_sleep > 0) {
-			_delay_ms(1);
-			--ticks_till_sleep;
+		cli();
+		char b = getByte();
+		if (b == '\n') {
+			stateReset();
+			continue;
 		}
-		writeString("going to sleep\n");
-		_delay_ms(50);
-		sleep_cpu();
-		sleep_disable();
-		writeString("\nback from sleep\n");
+		if (smState == STATE_INIT && (b == 'H' || b == 'h')) {
+			displayHelp();
+			stateReset();
+			continue;
+		}
+		if (smState == STATE_INIT && (b == 'C' || b == 'c')) {
+			char next = getByte();
+			if (next == ':') {
+				smState = STATE_WAIT_FOR_CMD;
+				continue;
+			} else {
+				invalidCmd();
+				stateReset();
+				continue;
+			}
+		}
+		if (smState == STATE_WAIT_FOR_CMD && (b == 'P' || b == 'p')) {
+			char next = getByte();
+			if (next == ':') {
+				smState = STATE_CMD_ON;
+				continue;
+			} else {
+				invalidCmd();
+				stateReset();
+				continue;
+			}
+		}
+		if (smState == STATE_WAIT_FOR_CMD && (b == 'S' || b == 's')) {
+			char next = getByte();
+			if (next == ':') {
+				smState = STATE_CMD_OFF;
+				continue;
+			} else {
+				invalidCmd();
+				stateReset();
+				continue;
+			}
+		}
+		if (smState == STATE_CMD_ON) {
+			writeString("\nturning on ");
+			writeByte(b);
+			writeString("\n");
+			stateReset();
+		}
+		if (smState == STATE_CMD_OFF) {
+			writeString("\nturning off ");
+			writeByte(b);
+			writeString("\n");
+			stateReset();
+		}
+		
 	}
 
 }
+
 
 
