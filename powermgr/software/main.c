@@ -17,6 +17,8 @@
 
 #include "lib/uart.h"
 #include "lib/state.h"
+
+
 //calculate UBRR value
 #define UBRRVAL ((F_CPU/(BAUDRATE*16UL))-1)
 
@@ -28,6 +30,9 @@
 #define sbi(port, bit)   (port) |= (1 << (bit))
 #define cbi(port, bit)   (port) &= ~(1 << (bit))
 #define gbi(port, bit)   (port) & (1 << (bit))
+
+
+#include "lib/neopixel.h"
 
 
 #define SR_PORT PORTD
@@ -45,9 +50,25 @@
 
 //#define DEBUG
 
-#define SLOWSTART_DELAY_MS 5 //000
+#define SLOWSTART_DELAY_MS 5000
 
 uint8_t out = 0b00000001;
+
+// neopixel expects GRB
+uint8_t ledG[8];
+uint8_t ledR[8];
+uint8_t ledB[8];
+
+void sendNeopixels() {
+	cli();
+	for(uint8_t i=0;i<8;i++) {
+		neopixelSendByte(ledG[i]);
+		neopixelSendByte(ledR[i]);
+		neopixelSendByte(ledB[i]);
+	}
+	sei();
+}
+
 
 
 static volatile int16_t ticks_till_sleep=1000;
@@ -93,6 +114,10 @@ void bootSequence(void) {
 		out = (out<<1) + 1;
 		writeByte('.');
 		writeByte(i + 0x30);
+		ledR[i]=10;
+		ledG[i]=0;
+		ledB[i]=0;
+		sendNeopixels();
 		_delay_ms(SLOWSTART_DELAY_MS);
 	}
 	writeString("\n");
@@ -111,7 +136,7 @@ void bootFanPWM(void) {
 	OCR1A = 0x0050;
 	TCCR1A |= (1 << COM1A1);
 
-        // 9bit fast pwm
+	// 9bit fast pwm
 	TCCR1A |= (1 << WGM11);
 	TCCR1B |= (1 << WGM12);
 	// START the timer with no prescaler
@@ -213,6 +238,8 @@ int main(void) {
 	sbi(SR_PORT_DDR,SR_STROBE);
 	sbi(SR_PORT_DDR,SR_ENA);
 	initUART();
+	// setup neopixel
+	sbi(DDRB, 4);
 	// set all ports to down
 	shiftOut(0b000000);
 	shiftStrobe();
@@ -231,6 +258,7 @@ int main(void) {
 		shiftOut(out);
 		shiftStrobe();
 		ledToggle();
+		sendNeopixels();
 	}
 }
 

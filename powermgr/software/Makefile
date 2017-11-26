@@ -46,7 +46,7 @@ TARGET = main
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c  lib/uart.c lib/state.c
+SRC = $(TARGET).c   lib/uart.c lib/state.c lib/neopixel.c
 
 
 # List Assembler source files here.
