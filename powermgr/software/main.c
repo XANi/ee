@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
+#include <ctype.h>
+#include <string.h>
 //#include "lib/lcd.h"
 #define var __auto_type
 
@@ -15,8 +17,10 @@
 //set desired baud rate
 #define _BAUD 57600
 
+#include "common.h"
+#include "main.h"
 #include "lib/uart.h"
-#include "lib/state.h"
+#include "state.h"
 
 
 //calculate UBRR value
@@ -25,11 +29,6 @@
 #define LSBFIRST 1
 #define USBFIRST 0
 
-
-#define tbi(PORT,BIT)        PORT^=_BV(BIT)
-#define sbi(port, bit)   (port) |= (1 << (bit))
-#define cbi(port, bit)   (port) &= ~(1 << (bit))
-#define gbi(port, bit)   (port) & (1 << (bit))
 
 
 #include "lib/neopixel.h"
@@ -52,12 +51,12 @@
 
 #define SLOWSTART_DELAY_MS 5000
 
-uint8_t out = 0b00000001;
 
-// neopixel expects GRB
-uint8_t ledG[8];
-uint8_t ledR[8];
-uint8_t ledB[8];
+#define MAX_CMD_SIZE 20
+volatile char serialBuffer[MAX_CMD_SIZE+1];
+volatile char cmdBuffer[MAX_CMD_SIZE+1];
+volatile uint8_t newCmd = 0;
+volatile uint8_t serialBufferPos = 0;
 
 void sendNeopixels() {
 	cli();
@@ -108,6 +107,12 @@ void ledToggle(void) {
 void bootSequence(void) {
 	writeString("Running boot sequence");
 	for(uint8_t i=0;i<8;i++) {
+		ledR[i]=1;
+		ledG[i]=1;
+		ledB[i]=1;
+	}
+	sendNeopixels();
+	for(uint8_t i=0;i<8;i++) {
 		shiftOut(out);
 		shiftStrobe();
 		ledToggle();
@@ -146,63 +151,27 @@ void bootFanPWM(void) {
 
 ISR(USART_RX_vect)
 {
-	var b = getByte();
-	writeByte(b);
-	if (b == '\n') {
-		stateReset();
+	var b = tolower(getByte());
+//	char b = getByte();
+	if (b == '\n' || b == '\r') {
+		writeByte(b); // echo
+		if (!serialBufferPos) { return ;}
+		memcpy(cmdBuffer, serialBuffer, sizeof(cmdBuffer));
+		cmdBuffer[sizeof(cmdBuffer) -1] = 0;
+		serialBufferPos = 0;
+		serialBuffer[0]=0;
+		newCmd = 1;
 		return;
 	}
-	if (smState == STATE_INIT && (b == 'H' || b == 'h')) {
-		displayHelp();
-		stateReset();
+	if (serialBufferPos >= sizeof(cmdBuffer)) {
+		writeByte('X');
 		return;
+		// buffer overrun, ignore rest
 	}
-	if (smState == STATE_INIT && (b == 'C' || b == 'c')) {
-		smState = STATE_WAIT_FOR_CMD;
-		return;
-	}
-	if (smState == STATE_INIT &&  b == ':' ) {
-		return;
-	}
-	if (smState == STATE_WAIT_FOR_CMD && (b == 'P' || b == 'p')) {
-		smState = STATE_CMD_ON;
-		return;
-	}
-	if (smState == STATE_WAIT_FOR_CMD && (b == 'S' || b == 's')) {
-		smState = STATE_CMD_OFF;
-		return;
-	}
-	if (smState == STATE_WAIT_FOR_CMD &&  b == ':' ) {
-		return;
-	}
-	if ((smState == STATE_CMD_ON || smState == STATE_CMD_OFF ) &&  b == ':' ) {
-		return;
-	}
-	if ((smState == STATE_CMD_ON || smState == STATE_CMD_OFF ) && (b < 48 || b > 48+7 )) {
-		badRangeError();
-		stateReset();
-		return;
-	}
-	if (smState == STATE_CMD_ON) {
-		uint8_t portNo = b - 48;
-		writeString("\nturning on ");
-		sbi(out,portNo);
-		writeByte(b);
-		writeString("\n");
-		stateReset();
-		return;
-	}
-	if (smState == STATE_CMD_OFF) {
-		uint8_t portNo = b - 48;
-		writeString("\nturning off ");
-		cbi(out,portNo);
-		writeByte(b);
-		writeString("\n");
-		stateReset();
-		return;
-	}
-	displayHelp();
-	stateReset();
+	writeByte(b); // echo
+	serialBuffer[serialBufferPos++] = b;
+	serialBuffer[serialBufferPos] = 0;
+
 	return;
 }
 
@@ -225,6 +194,7 @@ void displayHelp() {
 	writeString("    -- socket number goes 0-7 --\n");
 	writeString("    C:P:0: - power-on socket 0\n");
 	writeString("    C:S:0: - shut down socket 0\n");
+	writeString("");
 }
 
 void invalidCmd() {
@@ -253,12 +223,31 @@ int main(void) {
 	sei();
 	PCICR |= (1 << PCIE2);     // set PCIE2 to enable PCMSK2 scan
 	PCMSK2 |= (1 << PCINT16);   // set PCINT16 to trigger an interrupt on state change
+	set_sleep_mode(SLEEP_MODE_IDLE);
+	uint8_t ctr = 0; //todo interrupt should clock that
+	uint8_t update;
 	while(1) {
-		_delay_ms(100);
-		shiftOut(out);
-		shiftStrobe();
-		ledToggle();
-		sendNeopixels();
+		sleep_enable();
+		sleep_bod_disable();
+		sei();
+		sleep_cpu();
+		sleep_disable();
+		//	PCMSK2 |= (1 << PCINT16);
+		if (newCmd) {
+			//cli();
+			runCli(cmdBuffer);
+			writeByte('>');
+			newCmd=0;
+			update = 1;
+			//sei();
+		}
+		if ((ctr % 128) == 1 || update == 1) {
+			update = 0;
+			shiftOut(out);
+			shiftStrobe();
+			ledToggle();
+			sendNeopixels();
+		}
 	}
 }
 
