@@ -7,7 +7,7 @@
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
 //#include "lib/lcd.h"
-
+#define var __auto_type
 
 #define F_CPU 8000000
 
@@ -146,7 +146,7 @@ void bootFanPWM(void) {
 
 ISR(USART_RX_vect)
 {
-	char b = getByte();
+	var b = getByte();
 	writeByte(b);
 	if (b == '\n') {
 		stateReset();
