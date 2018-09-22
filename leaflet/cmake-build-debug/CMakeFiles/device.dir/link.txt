@@ -1,0 +1,2 @@
+/usr/bin/arm-none-eabi-ar qc libdevice.a  CMakeFiles/device.dir/device/EFM32HG/Source/GCC/startup_efm32hg.S.obj CMakeFiles/device.dir/device/EFM32HG/Source/system_efm32hg.c.obj
+/usr/bin/arm-none-eabi-ranlib libdevice.a
