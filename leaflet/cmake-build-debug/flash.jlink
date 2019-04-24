@@ -1,7 +1,0 @@
-device EFM32HG322F64
-h
-loadbin efm32-test.bin, 0x00000000
-verifybin efm32-test.bin, 0x00000000
-r
-g
-qc
