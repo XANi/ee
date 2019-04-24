@@ -49,7 +49,9 @@ include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 
 # Add project headers
 include_directories(${BASE_LOCATION}/include)
-
+#add_library(boost INTERFACE IMPORTED)
+#set_property(TARGET boost PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIRS})
+#add_library(graph STATIC lib/graphics)
 # Add project sources
 set(SOURCES
 	source/main.c

@@ -1,0 +1,30 @@
+# Build directories
+build/
+builds/
+
+# Generated Files
+*.o
+*.so
+*.lib
+*.a
+# CTags
+*tags
+*tags_sorted_by_file
+
+# Backup files
+*~
+
+# Misc
+*.DS_Store
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+cmake-build-debug
