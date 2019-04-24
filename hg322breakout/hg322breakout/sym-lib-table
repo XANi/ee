@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name SiliconLabslib)(type Legacy)(uri /home/xani/src/my/ee/lib/kicad/SiliconLabslib.lib)(options "")(descr ""))
+)

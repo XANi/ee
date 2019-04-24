@@ -1,0 +1,53 @@
+(export (version D)
+  (design
+    (source /home/xani/src/my/ee/korad_load_adapter/korad_load_adapter/korad_load_adapter.sch)
+    (date "Fri 08 Mar 2019 00:47:50 CET")
+    (tool "Eeschema 5.0.0+dfsg1-1")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source korad_load_adapter.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref J3)
+      (value Conn_01x02_Female)
+      (footprint Connector:Banana_Jack_2Pin)
+      (datasheet ~)
+      (libsource (lib Connector) (part Conn_01x02_Female) (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5C81AAE1))
+    (comp (ref J1)
+      (value Conn_01x02_Female)
+      (footprint Connector:Banana_Jack_2Pin)
+      (datasheet ~)
+      (libsource (lib Connector) (part Conn_01x02_Female) (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5C81B2C2)))
+  (libparts
+    (libpart (lib Connector) (part Conn_01x02_Female)
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (docs ~)
+      (footprints
+        (fp Connector*:*_1x??_*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Conn_01x02_Female))
+      (pins
+        (pin (num 1) (name Pin_1) (type passive))
+        (pin (num 2) (name Pin_2) (type passive)))))
+  (libraries
+    (library (logical Connector)
+      (uri /usr/share/kicad/library/Connector.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref J3) (pin 2))
+      (node (ref J1) (pin 1)))
+    (net (code 2) (name VCC)
+      (node (ref J1) (pin 2))
+      (node (ref J3) (pin 1)))))
