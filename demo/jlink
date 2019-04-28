@@ -1,0 +1,9 @@
+source [find interface/jlink.cfg]
+transport select swd
+telnet_port 12345
+source [find target/efm32.cfg]
+#reset_config srst_only
+targets
+init
+
+reset
