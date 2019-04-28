@@ -161,7 +161,7 @@ void GRAPHICS_DrawFast(int32_t tempData, uint32_t rhData, bool lowBat,uint32_t v
 		    blank.yMin += 8;
 		    blank.yMax += 8;
 	 //       GLIB_drawRectFilled(&glibContext, &blank);
-		   	GRAPHICS_CreateString2(string, vBatt*954/1000); // tune for shitty adc
+		   	GRAPHICS_CreateString2(string, vBatt); // tune for shitty adc
 		    string[7]='v';
 		    string[8]= 0;
 		    GLIB_drawString(&glibContext, string, strlen(string), 8*5, (offset * 8), 0);

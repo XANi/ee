@@ -66,6 +66,8 @@ extern "C" {
 #define CDC_UART_RX_PIN           1
 #define CDC_ENABLE_DK_UART_SWITCH()     /* Empty define, this is not a DK. */
 
+#define USB_PWRSAVE_MODE (USB_PWRSAVE_MODE_ONSUSPEND )
+
 #ifdef __cplusplus
 }
 #endif

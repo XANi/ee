@@ -25,10 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thermometer/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thermometer/include/usb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thermometer/source/usb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thermometer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thermometer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thermometer/drivers/src/graphics.c" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/drivers/src/graphics.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thermometer/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/source/main.c" afterDir="false" />
     </list>
@@ -80,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toolchain/efm32-base.cmake">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="65" column="87" selection-start-line="65" selection-start-column="87" selection-end-line="65" selection-end-column="87" />
+            <state relative-caret-position="840">
+              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -110,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6555">
-              <caret line="437" selection-start-line="437" selection-end-line="437" />
+            <state relative-caret-position="328">
+              <caret line="401" column="17" selection-start-line="401" selection-start-column="17" selection-end-line="401" selection-end-column="17" />
               <folding>
                 <element signature="e#687#708#0" expanded="true" />
               </folding>
@@ -234,9 +235,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+    <option name="x" value="960" />
     <option name="y" value="19" />
-    <option name="width" value="1924" />
+    <option name="width" value="962" />
     <option name="height" value="1063" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -245,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,6 +272,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,11 +442,13 @@
       <workItem from="1556479176323" duration="173000" />
       <workItem from="1556484924547" duration="741000" />
       <workItem from="1556485756526" duration="9000" />
+      <workItem from="1556488538808" duration="25000" />
+      <workItem from="1556488579576" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27913000" />
+    <option name="totallyTimeSpent" value="27941000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,9 +460,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="19" width="1924" height="1063" extended-state="0" />
+    <frame x="960" y="19" width="962" height="1063" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5078616" visible="true" weight="0.1656017" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5078616" visible="true" weight="0.17248908" />
       <window_info id="Structure" order="1" sideWeight="0.49213836" side_tool="true" weight="0.15921193" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -776,6 +780,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/toolchain/efm32-base.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/toolchain/arm-gcc.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -789,16 +800,6 @@
           <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
           <folding>
             <element signature="e#812#831#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6555">
-          <caret line="437" selection-start-line="437" selection-end-line="437" />
-          <folding>
-            <element signature="e#687#708#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,10 +831,13 @@
     <entry file="file://$PROJECT_DIR$/drivers/inc/udelay.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/toolchain/efm32-base.cmake">
+    <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="65" column="87" selection-start-line="65" selection-start-column="87" selection-end-line="65" selection-end-column="87" />
+        <state relative-caret-position="328">
+          <caret line="401" column="17" selection-start-line="401" selection-start-column="17" selection-end-line="401" selection-end-column="17" />
+          <folding>
+            <element signature="e#687#708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

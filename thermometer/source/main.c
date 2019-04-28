@@ -28,16 +28,19 @@
 #include "bspconfig.h"
 
 #include "em_usb.h"
+#include "em_usbh.h"
 #include "cdc.h"
 #include "descriptors.h"
 #include "display.h"
 
+#include "usb.c"
+#include "util.c"
 /***************************************************************************//**
  * Local defines
  ******************************************************************************/
 
 /** Time (in ms) between periodic updates of the measurements. */
-#define PERIODIC_UPDATE_MS      60000
+#define PERIODIC_UPDATE_MS      6000
 /** Voltage defined to indicate dead battery. */
 #define LOW_BATTERY_THRESHOLD   2800
 /* threshold above which start in USB mode - 3V lithium batteries dont go that high */
@@ -82,6 +85,7 @@ static int performMeasurements(I2C_TypeDef *i2c, uint32_t *rhData, int32_t *tDat
   return 0;
 }
 
+
 /***************************************************************************//**
  * @brief  Main function
  ******************************************************************************/
@@ -92,6 +96,7 @@ int main(void)
   bool             si7013_status;
   int32_t          tempData;
   uint32_t         vBat = 3299;
+  uint32_t         vADC = 0;
   bool             lowBat = false;
 
   /* Chip errata */
@@ -127,14 +132,37 @@ int main(void)
   GRAPHICS_ShowStatus(si7013_status, bootUSB,lowBat);
   updateDisplay = true;
   uint8_t line = 1;
+  uint8_t usbOut[4*12] = "temp,humidity,voltage       \n";
+  if (bootUSB) {
+      GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,1);
+      InitUSB();
+      GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,0);
+  }
   while (true) {
     if (updateMeasurement) {
       performMeasurements(i2cInit.port, &rhData, &tempData, &vBat);
       updateMeasurement = false;
+      if (USBD_GetUsbState() == USBD_STATE_CONFIGURED) {
+          GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,1);
+           for(int8_t i = 0; i <= 40 ;i++) {
+               usbOut[i]=0x00;
+           }
+          PutInt32String(&usbOut,0,tempData);
+          usbOut[7]=',';
+          PutInt32String(&usbOut,8,rhData);
+          usbOut[15]=',';
+          PutInt32String(&usbOut,16,vBat);
+          usbOut[23]=0x0a;
+          usbOut[24]=0;
+          usbOut[25]=0;
+         USBD_Write(CDC_EP_DATA_IN,&usbOut,strlen(&usbOut),NULL);
+         //USBD_Write(CDC_EP_DATA_IN,"test\n",6,NULL);
+         GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,0);
+      }
     }
 
     if (updateDisplay) {
-      //updateDisplay = false;
+      updateDisplay = false;
 
       CMU_HFRCOBandSet(cmuHFRCOBand_21MHz);
       GRAPHICS_DrawFast(tempData, rhData, lowBat, vBat,line);
@@ -142,7 +170,14 @@ int main(void)
       if (line > 15) {line = 0;}
       //CMU_HFRCOBandSet(cmuHFRCOBand_1MHz);
     }
-    EMU_EnterEM2(false);
+
+    if (!bootUSB ||USBD_SafeToEnterEM2()) {
+         GPIO_PinModeSet(BSP_GPIO_LED0_PORT,BSP_GPIO_LED0_PIN,gpioModePushPull,0);
+         GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,0);
+         EMU_EnterEM2(false);
+    } else {
+        EMU_EnterEM1();
+    }
   }
 }
 
@@ -154,13 +189,13 @@ static uint32_t checkBattery(void)
 {
   uint32_t vData;
   /* Sample ADC */
-  CMU_ClockEnable(cmuClock_ADC0,true);
+  //CMU_ClockEnable(cmuClock_ADC0,true);
   adcConversionComplete = false;
   ADC_Start(ADC0, adcStartSingle);
   while (!adcConversionComplete) EMU_EnterEM1();
   vData = ADC_DataSingleGet(ADC0);
-  CMU_ClockEnable(cmuClock_ADC0,false);
-  return vData;
+  //CMU_ClockEnable(cmuClock_ADC0,false);
+  return vData*954/1000;
 }
 
 /***************************************************************************//**

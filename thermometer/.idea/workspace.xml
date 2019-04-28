@@ -2,20 +2,20 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="efm32-test" targetName="d" />
-      <config projectName="efm32-test" targetName="e" />
-      <config projectName="efm32-test" targetName="f" />
-      <config projectName="efm32-test" targetName="erase" />
-      <config projectName="efm32-test" targetName="ds" />
-      <config projectName="efm32-test" targetName="r" />
-      <config projectName="efm32-test" targetName="debug-server" />
-      <config projectName="efm32-test" targetName="efm32-test" />
       <config projectName="efm32-test" targetName="drivers" />
-      <config projectName="efm32-test" targetName="device" />
-      <config projectName="efm32-test" targetName="emlib" />
-      <config projectName="efm32-test" targetName="flash" />
-      <config projectName="efm32-test" targetName="reset" />
       <config projectName="efm32-test" targetName="debug" />
+      <config projectName="efm32-test" targetName="emlib" />
+      <config projectName="efm32-test" targetName="r" />
+      <config projectName="efm32-test" targetName="efm32-test" />
+      <config projectName="efm32-test" targetName="device" />
+      <config projectName="efm32-test" targetName="ds" />
+      <config projectName="efm32-test" targetName="reset" />
+      <config projectName="efm32-test" targetName="flash" />
+      <config projectName="efm32-test" targetName="debug-server" />
+      <config projectName="efm32-test" targetName="f" />
+      <config projectName="efm32-test" targetName="e" />
+      <config projectName="efm32-test" targetName="d" />
+      <config projectName="efm32-test" targetName="erase" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -25,8 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/usb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/usb.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/util.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/board/usbconfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/board/usbconfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/src/graphics.c" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/src/graphics.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -55,129 +61,106 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/source/main.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
-                  <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drivers/board/usbconfig.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-497" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#687#708#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/emlib/inc/em_gpio.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="12360">
-                  <caret line="824" column="42" selection-start-line="824" selection-start-column="34" selection-end-line="824" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="64" selection-start-line="64" selection-end-line="64" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/source/InitDevice.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4667" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drivers/board/displayconfigapp.h">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drivers/drivers.cmake">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-end-line="11" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.travis.yml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="93" column="3" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
-                  <folding>
-                    <element signature="e#687#708#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/drivers/inc/graphics.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file:///usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="39" selection-start-line="39" selection-end-line="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-430">
+              <caret line="163" column="48" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
+              <folding>
+                <element signature="e#687#708#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/util.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toolchain/post-build.cmake">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
+              <folding>
+                <element signature="e#732#754#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/emlib/src/em_adc.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2025">
+              <caret line="1030" column="36" selection-start-line="1030" selection-start-column="31" selection-end-line="1030" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/device/EFM32HG/Include/efm32hg_adc.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="629" column="8" selection-start-line="629" selection-start-column="8" selection-end-line="629" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/src/em_usbd.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="808" column="30" selection-start-line="808" selection-start-column="30" selection-end-line="808" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/inc/em_usbtypes.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivers/src/display.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6407">
+              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/usb.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+              <folding>
+                <element signature="e#1#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>device</find>
-      <find>sharp_memlcd</find>
-      <find>segmentlcd</find>
-      <find>i2c</find>
-      <find>SCROLL_MODE</find>
-      <find>FONT</find>
-      <find>drawfast</find>
-      <find>textdisplay_font</find>
       <find>startu</find>
       <find>vector</find>
       <find>CORE_ExitAtomic</find>
@@ -200,6 +183,14 @@
       <find>low</find>
       <find>GPIO</find>
       <find>initdevice</find>
+      <find>usbtimer_dela</find>
+      <find>usbd_powereddown</find>
+      <find>PWRSAVE_MODE</find>
+      <find>usbpowerdown</find>
+      <find>powerDown</find>
+      <find>usbpowerdo</find>
+      <find>vbatt</find>
+      <find>input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,8 +221,13 @@
         <option value="$PROJECT_DIR$/drivers/drivers.cmake" />
         <option value="$PROJECT_DIR$/drivers/inc/tools.h" />
         <option value="$PROJECT_DIR$/drivers/inc/graphics.h" />
-        <option value="$PROJECT_DIR$/drivers/src/graphics.c" />
+        <option value="$PROJECT_DIR$/include/usb.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/source/usb.c" />
+        <option value="$PROJECT_DIR$/drivers/board/usbconfig.h" />
+        <option value="$PROJECT_DIR$/drivers/src/em_usbd.c" />
+        <option value="$PROJECT_DIR$/source/util.c" />
+        <option value="$PROJECT_DIR$/drivers/src/graphics.c" />
         <option value="$PROJECT_DIR$/source/main.c" />
       </list>
     </option>
@@ -277,7 +273,23 @@
             <path>
               <item name="efm32-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="thermometer" type="462c0819:PsiDirectoryNode" />
+              <item name="emlib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="efm32-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thermometer" type="462c0819:PsiDirectoryNode" />
+              <item name="emlib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="efm32-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thermometer" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="efm32-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thermometer" type="462c0819:PsiDirectoryNode" />
+              <item name="toolchain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,7 +337,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.Build All">
+  <component name="RunManager" selected="CMake Application.flash">
     <configuration name="Unnamed" type="CLion_Remote" debugger="/usr/bin/arm-none-eabi-gdb" remoteCommand="tcp:127.0.0.1:2331" symbolFile="$PROJECT_DIR$/cmake-build-debug/efm32-test" sysroot="">
       <method v="2" />
     </configuration>
@@ -455,11 +467,13 @@
       <workItem from="1556485766823" duration="17000" />
       <workItem from="1556485798653" duration="93000" />
       <workItem from="1556485903992" duration="1692000" />
+      <workItem from="1556487676134" duration="888000" />
+      <workItem from="1556488580008" duration="5514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25557000" />
+    <option name="totallyTimeSpent" value="31959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,9 +486,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="19" width="1924" height="1063" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.502611" visible="true" weight="0.16719915" />
-      <window_info id="Structure" order="1" sideWeight="0.49738905" side_tool="true" visible="true" weight="0.16719915" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913645" visible="true" weight="0.17305644" />
+      <window_info id="Structure" order="1" sideWeight="0.50086355" side_tool="true" weight="0.17305644" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -491,13 +506,39 @@
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.49574015" weight="0.32700422" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49307775" visible="true" weight="0.19198312" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" sideWeight="0.49307775" visible="true" weight="0.3892405" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="LuaJ" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913645" visible="true" weight="0.17305644" />
+      <window_info id="Structure" order="1" sideWeight="0.50086355" side_tool="true" visible="true" weight="0.17305644" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="DB Browser" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49840257" weight="0.32911393" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.32911393" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978904" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" weight="0.32946146" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946752" weight="0.32946146" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50692225" side_tool="true" weight="0.32911393" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49946752" weight="0.32911393" />
+      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.49574015" weight="0.32700422" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="13" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" sideWeight="0.49307775" visible="true" weight="0.3892405" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="LuaJ" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -519,105 +560,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drivers/inc/tftspi.h" />
-    <entry file="file://$PROJECT_DIR$/drivers/inc/rtcdriver.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/inc/si7013.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/src/em_usbh.c" />
-    <entry file="file://$PROJECT_DIR$/graphics/inc/glib.h" />
-    <entry file="file://$PROJECT_DIR$/drivers/inc/retargettextdisplay.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/inc/displayconfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#1054#1091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/inc/textdisplayconfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#1466#1517#0" expanded="true" />
-            <element signature="e#1564#1617#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphics/inc/em_types.h" />
-    <entry file="file://$PROJECT_DIR$/graphics/inc/graphics.h" />
-    <entry file="file://$PROJECT_DIR$/drivers/src/rtcdriver.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emlib/inc/em_core.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device/EFM32HG/Source/GCC/efm32hg.ld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device/EFM32HG/Source/GCC/startup_efm32hg.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="142" column="32" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/efm32hg.ld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toolchain/arm-gcc.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emlib/src/em_core.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="460" column="13" selection-start-line="460" selection-start-column="13" selection-end-line="460" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jlink.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device/device.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphics/graphics.cmake" />
     <entry file="file://$PROJECT_DIR$/toolchain/efm32-base.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -626,13 +568,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graphics/src/graphics.c" />
-    <entry file="file://$PROJECT_DIR$/drivers/src/display.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graphics/src/glib.c" />
     <entry file="file://$PROJECT_DIR$/emlib/src/em_gpio.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -645,13 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5730">
           <caret line="382" column="5" selection-start-line="382" selection-start-column="5" selection-end-line="382" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emlib/src/em_emu.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8055">
-          <caret line="537" selection-start-line="537" selection-end-line="537" />
         </state>
       </provider>
     </entry>
@@ -685,13 +613,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drivers/src/textdisplay.c" />
     <entry file="file://$PROJECT_DIR$/drivers/src/retargettextdisplay.c" />
-    <entry file="file://$PROJECT_DIR$/drivers/inc/display.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drivers/board/display.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -734,6 +655,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/descriptors.c" />
     <entry file="file://$PROJECT_DIR$/emlib/inc/em_gpio.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12360">
@@ -744,6 +666,71 @@
     <entry file="file://$PROJECT_DIR$/drivers/board/displayconfigapp.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/bmp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#721#740#0" expanded="true" />
+            <element signature="e#777#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/bmp.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/src/cdc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="e#697#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/cdc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" selection-end-column="7" />
+          <folding>
+            <element signature="e#1144#1156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/drivers.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/usb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/graphics.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/lib/gcc/arm-none-eabi/6.3.1/include/stdarg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -751,59 +738,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/inc/graphics.h">
+    <entry file="file://$PROJECT_DIR$/source/InitDevice.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="-450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emlib/inc/em_emu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="794" column="1" lean-forward="true" selection-start-line="794" selection-start-column="1" selection-end-line="794" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/board/usbconfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emlib/src/em_emu.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="949">
+          <caret line="480" column="5" selection-start-line="480" selection-start-column="5" selection-end-line="480" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_usbhal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7982" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_usbd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-812">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_usb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2443">
+          <caret line="663" column="19" selection-start-line="663" selection-start-column="19" selection-end-line="663" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_types.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_usbh.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/src/em_usbh.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/src/em_usbdint.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/display.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toolchain/post-build.cmake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/inc/em_usbtypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/src/em_usbd.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="808" column="30" selection-start-line="808" selection-start-column="30" selection-end-line="808" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/usb.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+          <folding>
+            <element signature="e#1#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/src/display.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6407">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/util.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/device/EFM32HG/Include/efm32hg_adc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="629" column="8" selection-start-line="629" selection-start-column="8" selection-end-line="629" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="-430">
+          <caret line="163" column="48" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
           <folding>
             <element signature="e#687#708#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/board/usbconfig.h">
+    <entry file="file://$PROJECT_DIR$/emlib/src/em_adc.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-497" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/InitDevice.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4667" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/descriptors.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivers/drivers.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-end-line="11" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="2025">
+          <caret line="1030" column="36" selection-start-line="1030" selection-start-column="31" selection-end-line="1030" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="274">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+          <folding>
+            <element signature="e#732#754#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

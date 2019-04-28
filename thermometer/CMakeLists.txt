@@ -51,7 +51,7 @@ include(${BASE_LOCATION}/drivers/drivers.cmake)
 ##### Files #####
 
 # Add project headers
-include_directories(${BASE_LOCATION}/include)
+
 link_directories(emlib)
 #target_link_libraries(${TARGET} emlib)
 #add_library(boost INTERFACE IMPORTED)
@@ -71,7 +71,7 @@ add_executable(${TARGET} ${SOURCES})
 #set(LIBS device emlib)
 #target_link_libraries(${TARGET} ${LIBS})
 target_link_libraries(${TARGET} device emlib drivers)
-
+include_directories(${TARGET} ${BASE_LOCATION}/include)
 ##### Post build #####
 
 # Add post build commands
