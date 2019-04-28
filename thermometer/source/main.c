@@ -17,6 +17,7 @@
 #include "em_device.h"
 #include "em_chip.h"
 #include "em_cmu.h"
+
 #include "em_emu.h"
 #include "em_gpio.h"
 #include "i2cspm.h"
@@ -25,6 +26,11 @@
 #include "graphics.h"
 #include "em_adc.h"
 #include "bspconfig.h"
+
+#include "em_usb.h"
+#include "cdc.h"
+#include "descriptors.h"
+#include "display.h"
 
 /***************************************************************************//**
  * Local defines

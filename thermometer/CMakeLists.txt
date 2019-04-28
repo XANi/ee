@@ -58,6 +58,8 @@ link_directories(emlib)
 #set_property(TARGET boost PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIRS})
 #add_library(graph STATIC lib/graphics)
 # Add project sources
+#FILE(GLOB ALL_SOURCES sources/*.c)
+#set(SOURCES ${ALL_SOURCES})
 set(SOURCES
 	source/main.c
 )
