@@ -103,3 +103,4 @@ What does all this mean?
  * I have no idea how this interacts with common FOSS licenses :-/
 
 
+/opt/SEGGER/JLink/JLinkGDBServer -device EFM32HG322F64 -speed 4000 -if SWD

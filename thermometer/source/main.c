@@ -34,6 +34,8 @@
 #define PERIODIC_UPDATE_MS      60000
 /** Voltage defined to indicate dead battery. */
 #define LOW_BATTERY_THRESHOLD   2800
+/* threshold above which start in USB mode - 3V lithium batteries dont go that high */
+#define USB_MODE_THRESHOLD   3300
 
 /***************************************************************************//**
  * Local variables
@@ -50,7 +52,8 @@ static volatile bool updateDisplay = true;
 static volatile bool updateMeasurement = true;
 /** Flag used to indicate ADC is finished */
 static volatile bool adcConversionComplete = false;
-
+/* start in USB mode */
+static volatile bool bootUSB = false;
 /** Timer used for periodic update of the measurements. */
 RTCDRV_TimerID_t periodicUpdateTimerId;
 
@@ -82,8 +85,7 @@ int main(void)
   uint32_t         rhData;
   bool             si7013_status;
   int32_t          tempData;
-  uint32_t         vBat = 3300;
-  bool             lowBatPrevious = true;
+  uint32_t         vBat = 3299;
   bool             lowBat = false;
 
   /* Chip errata */
@@ -94,6 +96,8 @@ int main(void)
   GRAPHICS_Init();
   RTCDRV_Init();
   I2CSPM_Init(&i2cInit);
+  GPIO_PinModeSet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB0_PIN, gpioModeInputPull, 1);
+  GPIO_PinModeSet(BSP_GPIO_PB0_PORT, BSP_GPIO_PB1_PIN, gpioModeInputPull, 1);
   CMU_HFRCOBandSet(cmuHFRCOBand_21MHz);
   /* Get initial sensor status */
   si7013_status = Si7013_Detect(i2cInit.port, SI7021_ADDR, NULL);
@@ -102,30 +106,32 @@ int main(void)
   RTCDRV_AllocateTimer(&periodicUpdateTimerId);
   RTCDRV_StartTimer(periodicUpdateTimerId, rtcdrvTimerTypePeriodic,
                     PERIODIC_UPDATE_MS, periodicUpdateCallback, NULL);
-
-  GRAPHICS_ShowStatus(si7013_status, false);
+  performMeasurements(i2cInit.port, &rhData, &tempData, &vBat);
+  if (vBat > USB_MODE_THRESHOLD) {
+      bootUSB = true;
+  } else if (vBat < LOW_BATTERY_THRESHOLD) {
+      lowBat = true;
+  }
+  if(!GPIO_PinInGet(BSP_GPIO_PB0_PORT,BSP_GPIO_PB0_PIN)) {
+      bootUSB = true;
+  }
+  if(!GPIO_PinInGet(BSP_GPIO_PB1_PORT,BSP_GPIO_PB1_PIN)) {
+      bootUSB = false;
+  }
+  GRAPHICS_ShowStatus(si7013_status, bootUSB,lowBat);
   updateDisplay = true;
-  uint8_t line;
+  uint8_t line = 1;
   while (true) {
     if (updateMeasurement) {
       performMeasurements(i2cInit.port, &rhData, &tempData, &vBat);
       updateMeasurement = false;
-      //GPIO_PinModeSet(BSP_GPIO_LED0_PORT,BSP_GPIO_LED0_PIN,gpioModePushPull,1);
-      if (lowBatPrevious) {
-        lowBat = (vBat <= LOW_BATTERY_THRESHOLD);
-      } else {
-        lowBat = false;
-      }
-      lowBatPrevious = (vBat <= LOW_BATTERY_THRESHOLD);
     }
 
     if (updateDisplay) {
       //updateDisplay = false;
 
       CMU_HFRCOBandSet(cmuHFRCOBand_21MHz);
-      //GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,1);
       GRAPHICS_DrawFast(tempData, rhData, lowBat, vBat,line);
-      //GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,0);
       ++line;
       if (line > 15) {line = 0;}
       //CMU_HFRCOBandSet(cmuHFRCOBand_1MHz);
@@ -142,10 +148,12 @@ static uint32_t checkBattery(void)
 {
   uint32_t vData;
   /* Sample ADC */
+  CMU_ClockEnable(cmuClock_ADC0,true);
   adcConversionComplete = false;
   ADC_Start(ADC0, adcStartSingle);
   while (!adcConversionComplete) EMU_EnterEM1();
   vData = ADC_DataSingleGet(ADC0);
+  CMU_ClockEnable(cmuClock_ADC0,false);
   return vData;
 }
 

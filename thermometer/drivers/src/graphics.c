@@ -20,6 +20,9 @@
 #include "display.h"
 #include "textdisplay.h"
 #include "retargettextdisplay.h"
+#include "em_gpio.h"
+#include "bspconfig.h"
+#include "tools.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -76,16 +79,18 @@ void GRAPHICS_Init(void)
  *        If you increase xoffset by 1, the bacground will be shifted by 8
  *        pixels
  ******************************************************************************/
-void GRAPHICS_ShowStatus(bool si7013_status, bool lowBat)
+void GRAPHICS_ShowStatus(bool si7013_status, bool bootUSB, bool lowBat)
 {
   GLIB_clear(&glibContext);
 
   if (lowBat) {
-    GLIB_drawString(&glibContext, "Low battery!", 16, 5, 115, 0);
+      GLIB_drawString(&glibContext, "Low battery!", 16, 5, 115, 0);
   } else if (!si7013_status) {
-    GLIB_drawString(&glibContext, "Failed to detect\nsi7021 sensor.", 32, 5, 5, 0);
+      GLIB_drawString(&glibContext, "Failed to detect\nsi7021 sensor.", 32, 5, 5, 0);
+  } else if (bootUSB) {
+      GLIB_drawString(&glibContext, " USB mode\n", 32, 0, 0, 0);
   } else {
-    GLIB_drawString(&glibContext, "Thermometer ready\n", 32, 5, 5, 0);
+      GLIB_drawString(&glibContext, " Thermometer ready\n", 32, 0, 0, 0);
   }
   DMD_updateDisplay();
 }
