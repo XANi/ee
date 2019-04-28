@@ -7,8 +7,9 @@
 # Headers
 include_directories(${CMAKE_CURRENT_LIST_DIR}/inc)
 
+
 # Source files
-FILE(GLOB BOARD_SOURCES ${CMAKE_CURRENT_LIST_DIR}/src/*.c)
+# FILE(GLOB BOARD_SOURCES ${CMAKE_CURRENT_LIST_DIR}/src/*.c)
 
 ##### Outputs #####
 

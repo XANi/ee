@@ -85,7 +85,7 @@ void GRAPHICS_ShowStatus(bool si7013_status, bool lowBat)
   } else if (!si7013_status) {
     GLIB_drawString(&glibContext, "Failed to detect\nsi7021 sensor.", 32, 5, 5, 0);
   } else {
-    GLIB_drawString(&glibContext, "si7021 sensor ready.\n", 32, 5, 5, 0);
+    GLIB_drawString(&glibContext, "Thermometer ready\n", 32, 5, 5, 0);
   }
   DMD_updateDisplay();
 }

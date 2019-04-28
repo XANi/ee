@@ -1,6 +1,0 @@
-(sym_lib_table
-  (lib (name MCP1711)(type Legacy)(uri /home/xani/src/my/ee/lib/kicad/MCP1711.lib)(options "")(descr ""))
-  (lib (name 0_misc)(type Legacy)(uri /home/xani/src/my/ee/lib/kicad/0_misc.lib)(options "")(descr ""))
-  (lib (name MCP16251T-I_CH)(type Legacy)(uri /home/xani/src/my/ee/lib/kicad/MCP16251T-I_CH.lib)(options "")(descr ""))
-  (lib (name SiliconLabslib)(type Legacy)(uri /home/xani/src/my/ee/lib/kicad/SiliconLabslib.lib)(options "")(descr ""))
-)

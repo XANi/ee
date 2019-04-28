@@ -46,7 +46,7 @@ endif()
 include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 
 include(${BASE_LOCATION}/drivers/drivers.cmake)
-include(${BASE_LOCATION}/graphics/graphics.cmake)
+# include(${BASE_LOCATION}/graphics/graphics.cmake)
 
 ##### Files #####
 
@@ -68,7 +68,7 @@ set(SOURCES
 add_executable(${TARGET} ${SOURCES})
 #set(LIBS device emlib)
 #target_link_libraries(${TARGET} ${LIBS})
-target_link_libraries(${TARGET} device emlib drivers graphics)
+target_link_libraries(${TARGET} device emlib drivers)
 
 ##### Post build #####
 

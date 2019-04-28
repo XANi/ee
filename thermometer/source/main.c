@@ -110,6 +110,7 @@ int main(void)
     if (updateMeasurement) {
       performMeasurements(i2cInit.port, &rhData, &tempData, &vBat);
       updateMeasurement = false;
+      //GPIO_PinModeSet(BSP_GPIO_LED0_PORT,BSP_GPIO_LED0_PIN,gpioModePushPull,1);
       if (lowBatPrevious) {
         lowBat = (vBat <= LOW_BATTERY_THRESHOLD);
       } else {
@@ -119,9 +120,12 @@ int main(void)
     }
 
     if (updateDisplay) {
-      updateDisplay = false;
-      //CMU_HFRCOBandSet(cmuHFRCOBand_21MHz);
+      //updateDisplay = false;
+
+      CMU_HFRCOBandSet(cmuHFRCOBand_21MHz);
+      //GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,1);
       GRAPHICS_DrawFast(tempData, rhData, lowBat, vBat,line);
+      //GPIO_PinModeSet(BSP_GPIO_LED1_PORT,BSP_GPIO_LED1_PIN,gpioModePushPull,0);
       ++line;
       if (line > 15) {line = 0;}
       //CMU_HFRCOBandSet(cmuHFRCOBand_1MHz);
