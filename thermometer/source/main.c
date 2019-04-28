@@ -40,7 +40,8 @@
  ******************************************************************************/
 
 /** Time (in ms) between periodic updates of the measurements. */
-#define PERIODIC_UPDATE_MS      6000
+#define PERIODIC_UPDATE_MS      60000
+#define PERIODIC_UPDATE_MS_USB      9900
 /** Voltage defined to indicate dead battery. */
 #define LOW_BATTERY_THRESHOLD   2800
 /* threshold above which start in USB mode - 3V lithium batteries dont go that high */
@@ -115,8 +116,7 @@ int main(void)
 
   /* Set up periodic update of the display. */
   RTCDRV_AllocateTimer(&periodicUpdateTimerId);
-  RTCDRV_StartTimer(periodicUpdateTimerId, rtcdrvTimerTypePeriodic,
-                    PERIODIC_UPDATE_MS, periodicUpdateCallback, NULL);
+
   performMeasurements(i2cInit.port, &rhData, &tempData, &vBat);
   if (vBat > USB_MODE_THRESHOLD) {
       bootUSB = true;
@@ -128,6 +128,13 @@ int main(void)
   }
   if(!GPIO_PinInGet(BSP_GPIO_PB1_PORT,BSP_GPIO_PB1_PIN)) {
       bootUSB = false;
+  }
+  if (bootUSB && !lowBat) {
+      RTCDRV_StartTimer(periodicUpdateTimerId, rtcdrvTimerTypePeriodic,
+                        PERIODIC_UPDATE_MS_USB, periodicUpdateCallback, NULL);
+  } else {
+      RTCDRV_StartTimer(periodicUpdateTimerId, rtcdrvTimerTypePeriodic,
+                        PERIODIC_UPDATE_MS, periodicUpdateCallback, NULL);
   }
   GRAPHICS_ShowStatus(si7013_status, bootUSB,lowBat);
   updateDisplay = true;

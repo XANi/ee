@@ -25,14 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/usb.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/usb.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/util.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/board/usbconfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/board/usbconfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/src/graphics.c" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/src/graphics.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -91,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="202" selection-start-line="202" selection-end-line="202" />
+            <state relative-caret-position="-525">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding>
                 <element signature="e#732#754#0" expanded="true" />
               </folding>
@@ -161,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>startu</find>
       <find>vector</find>
       <find>CORE_ExitAtomic</find>
       <find>display_init</find>
@@ -191,6 +183,7 @@
       <find>usbpowerdo</find>
       <find>vbatt</find>
       <find>input</find>
+      <find>PERIODIC_UPDATE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -468,12 +461,12 @@
       <workItem from="1556485798653" duration="93000" />
       <workItem from="1556485903992" duration="1692000" />
       <workItem from="1556487676134" duration="888000" />
-      <workItem from="1556488580008" duration="5514000" />
+      <workItem from="1556488580008" duration="6124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31959000" />
+    <option name="totallyTimeSpent" value="32569000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,8 +866,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        <state relative-caret-position="-525">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding>
             <element signature="e#732#754#0" expanded="true" />
           </folding>
