@@ -24,11 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../thermometer/.idea/dictionaries/xani.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thermometer/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="393" column="18" lean-forward="true" selection-start-line="393" selection-start-column="18" selection-end-line="393" selection-end-column="18" />
+            <state relative-caret-position="238">
+              <caret line="395" column="24" lean-forward="true" selection-start-line="395" selection-start-column="24" selection-end-line="395" selection-end-column="24" />
               <folding>
                 <element signature="e#687#708#0" expanded="true" />
               </folding>
@@ -225,6 +221,9 @@
       </list>
     </option>
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="iuHlXBiW" />
+  </component>
   <component name="NamedScopeManager">
     <scope name="not main" pattern="!file:source/main.c" />
     <scope name="main" pattern="file:source/main.c" />
@@ -242,7 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,6 +257,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +378,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="GDB Remote Debug.Unnamed" />
       <item itemvalue="CMake Application.Build All" />
       <item itemvalue="CMake Application.d" />
       <item itemvalue="CMake Application.debug-server" />
@@ -395,6 +393,7 @@
       <item itemvalue="CMake Application.flash" />
       <item itemvalue="CMake Application.r" />
       <item itemvalue="CMake Application.reset" />
+      <item itemvalue="GDB Remote Debug.Unnamed" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -431,11 +430,12 @@
       <workItem from="1556488538808" duration="25000" />
       <workItem from="1556488579576" duration="3000" />
       <workItem from="1563059936680" duration="29000" />
+      <workItem from="1578929905778" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27970000" />
+    <option name="totallyTimeSpent" value="28081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,8 +448,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="19" width="1924" height="1062" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5078616" visible="true" weight="0.17412141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5078616" visible="true" weight="0.17571884" />
       <window_info id="Structure" order="1" sideWeight="0.49213836" side_tool="true" weight="0.15921193" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -468,6 +469,7 @@
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
       <window_info active="true" anchor="bottom" id="Messages" order="14" sideWeight="0.49307775" visible="true" weight="0.32911393" />
+      <window_info anchor="right" id="Cargo" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -819,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drivers/src/graphics.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="393" column="18" lean-forward="true" selection-start-line="393" selection-start-column="18" selection-end-line="393" selection-end-column="18" />
+        <state relative-caret-position="238">
+          <caret line="395" column="24" lean-forward="true" selection-start-line="395" selection-start-column="24" selection-end-line="395" selection-end-column="24" />
           <folding>
             <element signature="e#687#708#0" expanded="true" />
           </folding>
