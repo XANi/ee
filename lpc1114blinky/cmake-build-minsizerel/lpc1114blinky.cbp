@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lpc1114blinky"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lpc1114blinky">
+				<Option output="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/lpc1114blinky" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/cmsis/TARGET_CORTEX_M"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/.pioenvs/lpc1114fn28"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/src"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/drivers"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/drivers/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/events"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/events/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal/storage_abstraction"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal/usb"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/cxxsupport"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source/TARGET_CORTEX_M"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source/minimal-printf"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX/TARGET_LPC11XX"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX/device"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp/dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/rpc"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBAudio"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBDevice"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBHID"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMIDI"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMSD"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBSerial"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets/TARGET_NXP"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost3GModule"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHID"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHub"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMIDI"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMSD"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostSerial"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/home/xani/.platformio/packages/tool-unity"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 lpc1114blinky"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lpc1114blinky/fast">
+				<Option output="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/lpc1114blinky" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/cmsis/TARGET_CORTEX_M"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/.pioenvs/lpc1114fn28"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/src"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/drivers"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/drivers/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/events"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/events/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal/storage_abstraction"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/hal/usb"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/cxxsupport"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/internal"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source/TARGET_CORTEX_M"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/platform/source/minimal-printf"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX/TARGET_LPC11XX"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/targets/TARGET_NXP/TARGET_LPC11XX_11CXX/device"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp/cmsis_dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/dsp/dsp"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/rpc"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBAudio"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBDevice"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBHID"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMIDI"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBMSD"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/USBSerial"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBDevice/targets/TARGET_NXP"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHost3GModule"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHID"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostHub"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMIDI"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostMSD"/>
+					<Add directory="/home/xani/.platformio/packages/framework-mbed/features/unsupported/USBHost/USBHostSerial"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/home/xani/.platformio/packages/tool-unity"/>
+					<Add directory="/home/xani/src/my/ee/lpc1114blinky/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 lpc1114blinky/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_VERBOSE">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_VERBOSE"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_MONITOR">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_MONITOR"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/xani/src/my/ee/lpc1114blinky/cmake-build-minsizerel/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xani/src/my/ee/lpc1114blinky/src/main.c">
+			<Option target="lpc1114blinky"/>
+		</Unit>
+		<Unit filename="/home/xani/src/my/ee/lpc1114blinky/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xani/src/my/ee/lpc1114blinky/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

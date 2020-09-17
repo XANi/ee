@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xani/src/my/ee/sid/cube/Core/Src/main.c
+/home/xani/src/my/ee/sid/cube/Core/Src/sid.c
 main.h
 /home/xani/src/my/ee/sid/cube/Core/Src/main.h
 

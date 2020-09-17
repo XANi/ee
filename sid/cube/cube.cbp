@@ -87,6 +87,9 @@
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/main.h">
 			<Option target="cube.elf"/>
 		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/sid.h">
+			<Option target="cube.elf"/>
+		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/stm32f1xx_hal_conf.h">
 			<Option target="cube.elf"/>
 		</Unit>
@@ -96,7 +99,13 @@
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Src/main.c">
 			<Option target="cube.elf"/>
 		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Src/sid.c">
+			<Option target="cube.elf"/>
+		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_hal_msp.c">
+			<Option target="cube.elf"/>
+		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_hal_timebase_tim.c">
 			<Option target="cube.elf"/>
 		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_it.c">
@@ -222,12 +231,6 @@
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
 			<Option target="cube.elf"/>
 		</Unit>
-		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h">
-			<Option target="cube.elf"/>
-		</Unit>
-		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h">
-			<Option target="cube.elf"/>
-		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
 			<Option target="cube.elf"/>
 		</Unit>
@@ -265,12 +268,6 @@
 			<Option target="cube.elf"/>
 		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
-			<Option target="cube.elf"/>
-		</Unit>
-		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c">
-			<Option target="cube.elf"/>
-		</Unit>
-		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c">
 			<Option target="cube.elf"/>
 		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">

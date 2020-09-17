@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /home/xani/src/soft/clion-2020.1.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /home/xani/src/soft/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -56,27 +56,27 @@ CMAKE_BINARY_DIR = /home/xani/src/my/ee/sid/cube
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/xani/src/soft/clion-2020.1.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/xani/src/soft/clion-2020.1.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -149,6 +149,33 @@ Core/Src/main.s: Core/Src/main.c.s
 Core/Src/main.c.s:
 	$(MAKE) -f CMakeFiles/cube.elf.dir/build.make CMakeFiles/cube.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
+
+Core/Src/sid.obj: Core/Src/sid.c.obj
+
+.PHONY : Core/Src/sid.obj
+
+# target to build an object file
+Core/Src/sid.c.obj:
+	$(MAKE) -f CMakeFiles/cube.elf.dir/build.make CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+.PHONY : Core/Src/sid.c.obj
+
+Core/Src/sid.i: Core/Src/sid.c.i
+
+.PHONY : Core/Src/sid.i
+
+# target to preprocess a source file
+Core/Src/sid.c.i:
+	$(MAKE) -f CMakeFiles/cube.elf.dir/build.make CMakeFiles/cube.elf.dir/Core/Src/sid.c.i
+.PHONY : Core/Src/sid.c.i
+
+Core/Src/sid.s: Core/Src/sid.c.s
+
+.PHONY : Core/Src/sid.s
+
+# target to generate assembly for a file
+Core/Src/sid.c.s:
+	$(MAKE) -f CMakeFiles/cube.elf.dir/build.make CMakeFiles/cube.elf.dir/Core/Src/sid.c.s
+.PHONY : Core/Src/sid.c.s
 
 Core/Src/stm32f1xx_hal_msp.obj: Core/Src/stm32f1xx_hal_msp.c.obj
 
@@ -624,12 +651,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... cube.elf"
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"
+	@echo "... Core/Src/sid.obj"
+	@echo "... Core/Src/sid.i"
+	@echo "... Core/Src/sid.s"
 	@echo "... Core/Src/stm32f1xx_hal_msp.obj"
 	@echo "... Core/Src/stm32f1xx_hal_msp.i"
 	@echo "... Core/Src/stm32f1xx_hal_msp.s"

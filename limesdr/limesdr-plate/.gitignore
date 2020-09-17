@@ -1,0 +1,5 @@
+*.zip
+plots/
+*-cache.lib
+_autosave*
+*-bak

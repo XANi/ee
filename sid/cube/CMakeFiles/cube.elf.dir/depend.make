@@ -5,6 +5,7 @@ CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj: Core/Startup/s
 
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Core/Src/main.c
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Core/Inc/main.h
+CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Core/Inc/sid.h
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Core/Inc/stm32f1xx_hal_conf.h
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
@@ -33,6 +34,37 @@ CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/st
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Core/Src/sid.c
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Core/Inc/main.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Core/Inc/stm32f1xx_hal_conf.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_armcc.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_armclang.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_compiler.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_gcc.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_iccarm.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/cmsis_version.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/core_cm3.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/CMSIS/Include/mpu_armv7.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: Core/Src/stm32f1xx_hal_msp.c
 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: Core/Inc/main.h

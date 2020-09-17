@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "sid.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -102,13 +103,9 @@ int main(void)
 
   while (1) {
 
-     HAL_Delay(500);
-     htim1.Init.Period++;
-     if (htim1.Init.Period > 20000) {
-      htim1.Init.Period = 1;
-     }
-     HAL_TIM_Base_Init(&htim1);
-     HAL_GPIO_TogglePin(SID_A3_GPIO_Port,SID_A3_Pin);
+     sidplay();
+
+
 
     /* USER CODE END WHILE */
 

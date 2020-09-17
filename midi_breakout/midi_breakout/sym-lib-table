@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name 0_euro)(type Legacy)(uri /home/xani/src/my/ee/lib/eurocad/eurocad.lib)(options "")(descr ""))
+  (lib (name euro)(type Legacy)(uri /home/xani/src/my/ee/lib/priv/euro.lib)(options "")(descr ""))
+  (lib (name fuck)(type Legacy)(uri ${KIPRJMOD}/fuck.lib)(options "")(descr "")(disabled))
+)

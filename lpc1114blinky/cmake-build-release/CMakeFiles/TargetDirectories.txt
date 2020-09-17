@@ -1,0 +1,13 @@
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/lpc1114blinky.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_CLEAN.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_PROGRAM.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_UPLOAD.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_BUILD_VERBOSE.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_MONITOR.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_BUILD.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_TEST.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_UPLOADFS.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir
+/home/xani/src/my/ee/lpc1114blinky/cmake-build-release/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir

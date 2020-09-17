@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cube.elf.dir/Core/Src/main.c.obj"
+  "CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj"
   "CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
   "CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj"
   "CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj"

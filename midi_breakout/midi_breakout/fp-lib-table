@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name 0_euro)(type KiCad)(uri /home/xani/src/my/ee/lib/eurocad/Eurocad.pretty)(options "")(descr ""))
+)

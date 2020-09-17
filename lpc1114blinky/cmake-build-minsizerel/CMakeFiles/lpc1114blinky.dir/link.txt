@@ -1,0 +1,1 @@
+/home/xani/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -Os -DNDEBUG  -rdynamic CMakeFiles/lpc1114blinky.dir/src/main.c.o  -o lpc1114blinky 

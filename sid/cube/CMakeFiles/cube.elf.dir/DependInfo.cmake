@@ -26,6 +26,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_C
   "/home/xani/src/my/ee/sid/cube/Core/Src/main.c" "/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir/Core/Src/main.c.obj"
+  "/home/xani/src/my/ee/sid/cube/Core/Src/sid.c" "/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj"
   "/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_hal_msp.c" "/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
   "/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_hal_timebase_tim.c" "/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj"
   "/home/xani/src/my/ee/sid/cube/Core/Src/stm32f1xx_it.c" "/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj"
