@@ -6,30 +6,13 @@
 // 0x01 (54273) 	frequency voice 1 high byte
 #define SID_V1_FREQ_WORD ((uint8_t)0x00
 #define SID_V1_FREQ_LOW ((uint8_t)0x00)
-#define SID_V1_FREQ_HIGH ((uint8_t)0x01
+#define SID_V1_FREQ_HIGH ((uint8_t)0x01)
 // 0x02 (54274) 	pulse wave duty cycle voice 1 low byte
 #define SID_V1_DUTY_LOW  ((uint8_t)0x02
 // 0x03 (54275) 	— 	pulse wave duty cycle voice 1 high byte
 #define SID_V1_DUTY_HIGH_4BIT  ((uint8_t)0x03
 // 0x04 (54276) 	control register voice 1
 #define SID_V1_CTRL_REG   ((uint8_t)0x04)
-// 	7 	6 	5 	4 	3 	2 	1 	0
-// 	noise
-#define SID_V1_CTRL_BIT_NOISE ((uint8_t)7)
-// 	pulse
-#define SID_V1_CTRL_BIT_PULSE ((uint8_t)6)
-// 	sawtooth
-#define SID_V1_CTRL_BIT_SAW ((uint8_t)5)
-// 	triangle
-#define SID_V1_CTRL_BIT_TRIANGLE ((uint8_t)4)
-// 	test
-#define SID_V1_CTRL_BIT_TEST ((uint8_t)3)
-// 	ring modulation with voice 3
-#define SID_V1_CTRL_BIT_RINGMOD ((uint8_t)2)
-// 	synchronize with voice 3
-#define SID_V1_CTRL_BIT_SYNC ((uint8_t)1)
-// 	gate
-#define SID_V1_CTRL_BIT_GATE ((uint8_t)0)
 // 	7..4 	3..0
 // 0x05 (54277) 	attack duration 	decay duration voice 1
 #define SID_V1_AD_4bit ((uint8_t)0x05)
@@ -37,6 +20,8 @@
 #define SID_V1_SR_4bit ((uint8_t)0x06)
 // 0x07 (54279) 	frequency voice 2 low byte
 // 0x08 (54280) 	frequency voice 2 high byte
+#define SID_V2_FREQ_LOW ((uint8_t)0x07)
+#define SID_V2_FREQ_HIGH ((uint8_t)0x08)
 // 0x09 (54281) 	pulse wave duty cycle voice 2 low byte
 // 	7..4 	3..0
 // 0x0a (54282) 	— 	pulse wave duty cycle voice 2 high byte
@@ -62,7 +47,9 @@
 // 0x17 (54295) 	filter resonance and routing
 // 	7..4 	3 	2 	1 	0
 // 	filter resonance 	external input 	voice 3 	voice 2 	voice 1
+#define SID_FILTER_RES ((uint8_t)0x18)
 // 0x18 (54296) 	filter mode and main volume control
+#define SID_FILTER ((uint8_t)0x18)
 // 	7 	6 	5 	4 	3..0
 // 	mute voice 3 	high pass 	band pass 	low pass 	main volume
 // 0x19 (54297) 	paddle x value (read only)
@@ -79,32 +66,55 @@
 #define SID_CTRL_SYNC     ((uint8_t)0b00000010)
 #define SID_CTRL_GATE     ((uint8_t)0b00000001)
 
+void sidwait() {
+    volatile uint8_t z;
+    for (uint8_t i = 0; i < 1; i++) { z++; }
+
+}
 
 void sidwrite(uint8_t addr, uint8_t data) {
+    // disable SID
+    HAL_GPIO_WritePin(SID_CS_GPIO_Port, SID_CS_Pin, 1);
+    HAL_GPIO_WritePin(SID_CLOCK_GPIO_Port, SID_CLOCK_Pin, 0);
     // write data
     uint16_t set_bits = data << 8u;
     uint16_t reset_bits = (data ^ 0xff) << 8u;
     uint32_t bsrr = (reset_bits << 16) | set_bits;
     GPIOB->BSRR = bsrr;
+//    HAL_GPIO_WritePin(SID_D0_GPIO_Port,SID_D0_Pin,(data & 0x00000001) > 0);
+//    HAL_GPIO_WritePin(SID_D1_GPIO_Port,SID_D1_Pin,(data & 0x00000010) > 0);
+//    HAL_GPIO_WritePin(SID_D2_GPIO_Port,SID_D2_Pin,(data & 0x00000100) > 0);
+//    HAL_GPIO_WritePin(SID_D3_GPIO_Port,SID_D3_Pin,(data & 0x00001000) > 0);
+//    HAL_GPIO_WritePin(SID_D4_GPIO_Port,SID_D4_Pin,(data & 0x00010000) > 0);
+//    HAL_GPIO_WritePin(SID_D5_GPIO_Port,SID_D5_Pin,(data & 0x00100000) > 0);
+//    HAL_GPIO_WritePin(SID_D6_GPIO_Port,SID_D6_Pin,(data & 0x01000000) > 0);
+//    HAL_GPIO_WritePin(SID_D7_GPIO_Port,SID_D7_Pin,(data & 0x10000000) > 0);
     // write addr
-    HAL_GPIO_WritePin(SID_A0_GPIO_Port, SID_A0_Pin, addr & 0b00000001);
-    HAL_GPIO_WritePin(SID_A1_GPIO_Port, SID_A1_Pin, addr & 0b00000010);
-    HAL_GPIO_WritePin(SID_A2_GPIO_Port, SID_A2_Pin, addr & 0b00000100);
-    HAL_GPIO_WritePin(SID_A3_GPIO_Port, SID_A3_Pin, addr & 0b00001000);
-    HAL_GPIO_WritePin(SID_A4_GPIO_Port, SID_A4_Pin, addr & 0b00010000);
-    HAL_Delay(1);
+    HAL_GPIO_WritePin(SID_A0_GPIO_Port, SID_A0_Pin, (addr & 0b00000001) > 0 );
+    HAL_GPIO_WritePin(SID_A1_GPIO_Port, SID_A1_Pin, (addr & 0b00000010) > 0 );
+    HAL_GPIO_WritePin(SID_A2_GPIO_Port, SID_A2_Pin, (addr & 0b00000100) > 0 );
+    HAL_GPIO_WritePin(SID_A3_GPIO_Port, SID_A3_Pin, (addr & 0b00001000) > 0 );
+    HAL_GPIO_WritePin(SID_A4_GPIO_Port, SID_A4_Pin, (addr & 0b00010000) > 0 );
     HAL_GPIO_WritePin(SID_RW_GPIO_Port, SID_RW_Pin, 0);
-    HAL_GPIO_WritePin(SID_CS_GPIO_Port, SID_CS_Pin, 1);
-    HAL_Delay(1);
-    HAL_GPIO_WritePin(SID_RW_GPIO_Port, SID_RW_Pin, 1);
+    sidwait();
+    HAL_GPIO_WritePin(SID_CLOCK_GPIO_Port, SID_CLOCK_Pin, 1);
+    sidwait();
     HAL_GPIO_WritePin(SID_CS_GPIO_Port, SID_CS_Pin, 0);
+    sidwait();
+    HAL_GPIO_WritePin(SID_CS_GPIO_Port, SID_CS_Pin, 1);
+    sidwait();
+    HAL_GPIO_WritePin(SID_RW_GPIO_Port, SID_RW_Pin, 1);
 };
 
-void sidplay(void) {
-    sidwrite(SID_V1_FREQ_LOW,0x01);
+void sidplay(uint8_t v) {
+    sidwrite(SID_FILTER_RES,0b11110000);
+   sidwrite(SID_FILTER,0b00011111);
+   sidwrite(SID_V1_FREQ_HIGH,v);
+    sidwrite(SID_V1_FREQ_LOW,0xf3);
+   // sidwrite(SID_V2_FREQ_LOW,0x03);
+   // sidwrite(SID_V2_FREQ_HIGH,0xf1);
     sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW | SID_CTRL_GATE);
-    sidwrite(SID_V1_AD_4bit, 0b01010101);
-    sidwrite(SID_V1_SR_4bit, 0b10101010);
-    HAL_Delay(100);
+   sidwrite(SID_V1_AD_4bit, 0b00001111);
+    sidwrite(SID_V1_SR_4bit, 0xff);
     sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW);
 }

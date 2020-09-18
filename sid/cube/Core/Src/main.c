@@ -19,11 +19,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "sid.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "sid.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,8 +39,6 @@
 
 /* USER CODE END PM */
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "EndlessLoop"
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
@@ -102,8 +99,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1) {
+      HAL_GPIO_WritePin(SID_RST_GPIO_Port,SID_RST_Pin,1);
+      for (uint8_t i = 0; i < 200; i=i+1) {
+          sidplay(i);
+      HAL_Delay(10);
+      }
 
-     sidplay();
 
 
 
@@ -264,7 +265,9 @@ static void MX_GPIO_Init(void)
                           |SID_A0_Pin|SID_CS_Pin|SID_RW_Pin|SID_CLOCK_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SID_RST_Pin|SID_D7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, SID_RST_Pin|SID_D2_Pin|SID_D3_Pin|SID_D4_Pin
+                          |SID_D5_Pin|SID_D6_Pin|SID_D7_Pin|SID_D0_Pin
+                          |SID_D1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_Pin */
   GPIO_InitStruct.Pin = LED_Pin;
@@ -282,19 +285,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : SID_RST_Pin SID_D7_Pin */
-  GPIO_InitStruct.Pin = SID_RST_Pin|SID_D7_Pin;
+  /*Configure GPIO pins : SID_RST_Pin SID_D2_Pin SID_D3_Pin SID_D4_Pin
+                           SID_D5_Pin SID_D6_Pin SID_D7_Pin SID_D0_Pin
+                           SID_D1_Pin */
+  GPIO_InitStruct.Pin = SID_RST_Pin|SID_D2_Pin|SID_D3_Pin|SID_D4_Pin
+                          |SID_D5_Pin|SID_D6_Pin|SID_D7_Pin|SID_D0_Pin
+                          |SID_D1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : SID_D2_Pin SID_D3_Pin SID_D4_Pin SID_D5_Pin
-                           SID_D6_Pin SID_D0_Pin SID_D1_Pin */
-  GPIO_InitStruct.Pin = SID_D2_Pin|SID_D3_Pin|SID_D4_Pin|SID_D5_Pin
-                          |SID_D6_Pin|SID_D0_Pin|SID_D1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA8 */
@@ -360,5 +359,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
-#pragma clang diagnostic pop
