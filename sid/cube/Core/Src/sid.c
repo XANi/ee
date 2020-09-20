@@ -117,14 +117,70 @@ void sidwrite16(uint8_t addr, uint16_t data) {
 }
 //c---D---f--D--f-f---A-G-gf
 void sidplay(uint8_t v) {
-    sidwrite(SID_FILTER_RES,0b11110000);
-    sidwrite(SID_FILTER,0b00010111);
+    sidwrite(SID_FILTER_RES, 0b11110000);
+    sidwrite(SID_FILTER, 0b00010111);
 
-    sidwrite16(SID_V1_FREQ_LOW,SID_NOTE_Ch_3);
-    sidwrite(SID_V1_AD_4bit, SID_DecayRelease_168ms);
-    sidwrite(SID_V1_SR_4bit,0b1000000 + SID_DecayRelease_24ms);
-    sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW | SID_CTRL_GATE);
-    HAL_Delay(400);
-    sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW);
-    HAL_Delay(400);
+    sidwrite(SID_V1_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V1_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_C_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(100);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(100);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Dh_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(100);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(100);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(70);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(70);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Dh_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(70);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(70);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(50);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(50);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(50);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(200);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Ah_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(100);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(100);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Gh_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(100);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(100);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_G_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(50);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(50);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(50);
+    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(50);
+
+    HAL_Delay(1000);
 }
