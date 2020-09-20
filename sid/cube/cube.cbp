@@ -90,6 +90,9 @@
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/sid.h">
 			<Option target="cube.elf"/>
 		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/sid_notes.h">
+			<Option target="cube.elf"/>
+		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Core/Inc/stm32f1xx_hal_conf.h">
 			<Option target="cube.elf"/>
 		</Unit>

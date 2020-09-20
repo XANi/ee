@@ -2,15 +2,16 @@
 // Created by xani on 17.09.2020.
 //
 #include "main.h"
+#include "sid_notes.h"
 // 0x00 (54272) 	frequency voice 1 low byte
 // 0x01 (54273) 	frequency voice 1 high byte
 #define SID_V1_FREQ_WORD ((uint8_t)0x00
 #define SID_V1_FREQ_LOW ((uint8_t)0x00)
 #define SID_V1_FREQ_HIGH ((uint8_t)0x01)
 // 0x02 (54274) 	pulse wave duty cycle voice 1 low byte
-#define SID_V1_DUTY_LOW  ((uint8_t)0x02
+#define SID_V1_DUTY_LOW  ((uint8_t)0x02)
 // 0x03 (54275) 	— 	pulse wave duty cycle voice 1 high byte
-#define SID_V1_DUTY_HIGH_4BIT  ((uint8_t)0x03
+#define SID_V1_DUTY_HIGH_4BIT  ((uint8_t)0x03)
 // 0x04 (54276) 	control register voice 1
 #define SID_V1_CTRL_REG   ((uint8_t)0x04)
 // 	7..4 	3..0
@@ -23,16 +24,20 @@
 #define SID_V2_FREQ_LOW ((uint8_t)0x07)
 #define SID_V2_FREQ_HIGH ((uint8_t)0x08)
 // 0x09 (54281) 	pulse wave duty cycle voice 2 low byte
+#define SID_V2_DUTY_LOW  ((uint8_t)0x09)
 // 	7..4 	3..0
 // 0x0a (54282) 	— 	pulse wave duty cycle voice 2 high byte
+#define SID_V2_DUTY_HIGH_4BIT  ((uint8_t)0x0a
 // 0x0b (54283) 	control register voice 2
-// 	7 	6 	5 	4 	3 	2 	1 	0
-// 	noise 	pulse 	sawtooth 	triangle 	test 	ring modulation with voice 1 	synchronize with voice 1 	gate
-// 	7..4 	3..0
+#define SID_V2_CTRL_REG   ((uint8_t)0x0b)
 // 0x0c (54284) 	attack duration 	decay duration voice 2
+#define SID_V2_AD_4bit ((uint8_t)0x0c)
 // 0x0d (54285) 	sustain level 	release duration voice 2
+#define SID_V2_SR_4bit ((uint8_t)0x0d)
 // 0x0e (54286) 	frequency voice 3 low byte
 // 0x0f (54287) 	frequency voice 3 high byte
+#define SID_V3_FREQ_LOW ((uint8_t)0x0e)
+#define SID_V3_FREQ_HIGH ((uint8_t)0x0f)
 // 0x10 (54288) 	pulse wave duty cycle voice 3 low byte
 // 	7..4 	3..0
 // 0x11 (54289) 	— 	pulse wave duty cycle voice 3 high byte
@@ -69,8 +74,8 @@
 void sidwait() {
     volatile uint8_t z;
     for (uint8_t i = 0; i < 1; i++) { z++; }
-
 }
+
 
 void sidwrite(uint8_t addr, uint8_t data) {
     // disable SID
@@ -106,15 +111,20 @@ void sidwrite(uint8_t addr, uint8_t data) {
     HAL_GPIO_WritePin(SID_RW_GPIO_Port, SID_RW_Pin, 1);
 };
 
+void sidwrite16(uint8_t addr, uint16_t data) {
+    sidwrite(addr, (uint8_t) (data & 0xff));
+    sidwrite(SID_V1_FREQ_HIGH, (uint8_t) (data >> 8));
+}
+//c---D---f--D--f-f---A-G-gf
 void sidplay(uint8_t v) {
     sidwrite(SID_FILTER_RES,0b11110000);
-   sidwrite(SID_FILTER,0b00011111);
-   sidwrite(SID_V1_FREQ_HIGH,v);
-    sidwrite(SID_V1_FREQ_LOW,0xf3);
-   // sidwrite(SID_V2_FREQ_LOW,0x03);
-   // sidwrite(SID_V2_FREQ_HIGH,0xf1);
+    sidwrite(SID_FILTER,0b00010111);
+
+    sidwrite16(SID_V1_FREQ_LOW,SID_NOTE_Ch_3);
+    sidwrite(SID_V1_AD_4bit, SID_DecayRelease_168ms);
+    sidwrite(SID_V1_SR_4bit,0b1000000 + SID_DecayRelease_24ms);
     sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW | SID_CTRL_GATE);
-   sidwrite(SID_V1_AD_4bit, 0b00001111);
-    sidwrite(SID_V1_SR_4bit, 0xff);
+    HAL_Delay(400);
     sidwrite(SID_V1_CTRL_REG,SID_CTRL_SAW);
+    HAL_Delay(400);
 }

@@ -7,6 +7,16 @@
 
 void sidplay(uint8_t);
 
-#endif //CUBE_SID_H
 
+
+// sid note data from manual
+#define SID_NODE_MANUAL
+#ifdef SID_NOTE_MANUAL
+
+#endif SID_NOTE_MANUAL
+
+
+
+
+#endif //CUBE_SID_H
 

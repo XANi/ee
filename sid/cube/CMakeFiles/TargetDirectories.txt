@@ -1,3 +1,0 @@
-/home/xani/src/my/ee/sid/cube/CMakeFiles/edit_cache.dir
-/home/xani/src/my/ee/sid/cube/CMakeFiles/rebuild_cache.dir
-/home/xani/src/my/ee/sid/cube/CMakeFiles/cube.elf.dir
