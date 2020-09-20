@@ -46,9 +46,7 @@ Discarded input sections
  .data          0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .text.HAL_TIM_Base_MspDeInit
-                0x0000000000000000       0x4c CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .text.HAL_TIM_OC_MspDeInit
-                0x0000000000000000       0x30 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000000000000       0x68 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .text.HAL_UART_MspDeInit
                 0x0000000000000000       0x44 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
@@ -435,8 +433,6 @@ Discarded input sections
                 0x0000000000000000       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_Base_MspDeInit
                 0x0000000000000000       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .text.HAL_TIM_Base_Start
-                0x0000000000000000       0x46 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_Base_Stop
                 0x0000000000000000       0x54 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_Base_Stop_IT
@@ -447,12 +443,8 @@ Discarded input sections
                 0x0000000000000000       0x64 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_OC_DeInit
                 0x0000000000000000       0x60 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .text.HAL_TIM_OC_MspInit
-                0x0000000000000000       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_OC_MspDeInit
                 0x0000000000000000       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .text.HAL_TIM_OC_Start
-                0x0000000000000000       0x64 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_OC_Stop
                 0x0000000000000000       0x90 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.HAL_TIM_OC_Start_IT
@@ -617,8 +609,6 @@ Discarded input sections
                 0x0000000000000000       0x76 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_TI4_SetConfig
                 0x0000000000000000       0x78 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .text.TIM_CCxChannelCmd
-                0x0000000000000000       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
@@ -873,7 +863,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x2f50
+.text           0x000000000800010c     0x30a8
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800010c       0x88 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -888,389 +878,398 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
  .text          0x00000000080002bc       0x64 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
                 0x00000000080002bc                __register_exitproc
  *(.text*)
- .text.main     0x0000000008000320       0x5c CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+ .text.main     0x0000000008000320       0x70 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
                 0x0000000008000320                main
  .text.SystemClock_Config
-                0x000000000800037c       0x82 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
-                0x000000000800037c                SystemClock_Config
- *fill*         0x00000000080003fe        0x2 
+                0x0000000008000390       0x96 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x0000000008000390                SystemClock_Config
+ *fill*         0x0000000008000426        0x2 
  .text.MX_TIM1_Init
-                0x0000000008000400       0xa8 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x0000000008000428       0xa8 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .text.MX_TIM2_Init
-                0x00000000080004a8       0x98 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x00000000080004d0       0x98 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .text.MX_TIM3_Init
-                0x0000000008000540       0xc0 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x0000000008000568       0xfc CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .text.MX_USART1_UART_Init
-                0x0000000008000600       0x54 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x0000000008000664       0x54 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x0000000008000654      0x120 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x00000000080006b8      0x120 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008000774       0x24 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
-                0x0000000008000774                HAL_TIM_PeriodElapsedCallback
+                0x00000000080007d8       0x24 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x00000000080007d8                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x0000000008000798        0xc CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
-                0x0000000008000798                Error_Handler
- .text.sidwait  0x00000000080007a4       0x2c CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
-                0x00000000080007a4                sidwait
+                0x00000000080007fc        0xc CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+                0x00000000080007fc                Error_Handler
+ .text.sidwait  0x0000000008000808       0x2c CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+                0x0000000008000808                sidwait
  .text.sidwrite
-                0x00000000080007d0      0x108 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
-                0x00000000080007d0                sidwrite
+                0x0000000008000834      0x108 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+                0x0000000008000834                sidwrite
  .text.sidwrite16
-                0x00000000080008d8       0x36 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
-                0x00000000080008d8                sidwrite16
- .text.sidplay  0x000000000800090e      0x1b6 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
-                0x000000000800090e                sidplay
+                0x000000000800093c       0x36 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+                0x000000000800093c                sidwrite16
+ .text.sidplay  0x0000000008000972      0x1b6 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+                0x0000000008000972                sidplay
  .text.HAL_MspInit
-                0x0000000008000ac4       0x64 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0000000008000ac4                HAL_MspInit
+                0x0000000008000b28       0x64 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000008000b28                HAL_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x0000000008000b28       0x70 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0000000008000b28                HAL_TIM_Base_MspInit
- .text.HAL_TIM_OC_MspInit
-                0x0000000008000b98       0x3c CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0000000008000b98                HAL_TIM_OC_MspInit
+                0x0000000008000b8c       0x98 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000008000b8c                HAL_TIM_Base_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0000000008000bd4       0x64 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0000000008000bd4                HAL_TIM_MspPostInit
+                0x0000000008000c24       0x64 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000008000c24                HAL_TIM_MspPostInit
  .text.HAL_UART_MspInit
-                0x0000000008000c38       0xa8 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0000000008000c38                HAL_UART_MspInit
+                0x0000000008000c88       0xa8 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000008000c88                HAL_UART_MspInit
  .text.HAL_InitTick
-                0x0000000008000ce0       0xac CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
-                0x0000000008000ce0                HAL_InitTick
+                0x0000000008000d30       0xb0 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+                0x0000000008000d30                HAL_InitTick
  .text.NMI_Handler
-                0x0000000008000d8c        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000d8c                NMI_Handler
+                0x0000000008000de0        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000de0                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008000d98        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000d98                HardFault_Handler
+                0x0000000008000dec        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000dec                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008000d9e        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000d9e                MemManage_Handler
+                0x0000000008000df2        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000df2                MemManage_Handler
  .text.BusFault_Handler
-                0x0000000008000da4        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000da4                BusFault_Handler
+                0x0000000008000df8        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000df8                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008000daa        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000daa                UsageFault_Handler
+                0x0000000008000dfe        0x6 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000dfe                UsageFault_Handler
  .text.SVC_Handler
-                0x0000000008000db0        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000db0                SVC_Handler
+                0x0000000008000e04        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e04                SVC_Handler
  .text.DebugMon_Handler
-                0x0000000008000dbc        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000dbc                DebugMon_Handler
+                0x0000000008000e10        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e10                DebugMon_Handler
  .text.PendSV_Handler
-                0x0000000008000dc8        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000dc8                PendSV_Handler
+                0x0000000008000e1c        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e1c                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008000dd4        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000dd4                SysTick_Handler
+                0x0000000008000e28        0xc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e28                SysTick_Handler
  .text.TIM1_UP_IRQHandler
-                0x0000000008000de0       0x20 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000de0                TIM1_UP_IRQHandler
+                0x0000000008000e34       0x20 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e34                TIM1_UP_IRQHandler
  .text.TIM4_IRQHandler
-                0x0000000008000e00       0x14 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000e00                TIM4_IRQHandler
+                0x0000000008000e54       0x14 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e54                TIM4_IRQHandler
  .text.USART1_IRQHandler
-                0x0000000008000e14       0x14 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
-                0x0000000008000e14                USART1_IRQHandler
+                0x0000000008000e68       0x14 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000008000e68                USART1_IRQHandler
  .text.SystemInit
-                0x0000000008000e28       0x68 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
-                0x0000000008000e28                SystemInit
+                0x0000000008000e7c       0x68 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+                0x0000000008000e7c                SystemInit
  .text.Reset_Handler
-                0x0000000008000e90       0x48 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
-                0x0000000008000e90                Reset_Handler
+                0x0000000008000ee4       0x48 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+                0x0000000008000ee4                Reset_Handler
  .text.Default_Handler
-                0x0000000008000ed8        0x2 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
-                0x0000000008000ed8                RTC_Alarm_IRQHandler
-                0x0000000008000ed8                EXTI2_IRQHandler
-                0x0000000008000ed8                TIM1_CC_IRQHandler
-                0x0000000008000ed8                PVD_IRQHandler
-                0x0000000008000ed8                EXTI3_IRQHandler
-                0x0000000008000ed8                EXTI0_IRQHandler
-                0x0000000008000ed8                I2C2_EV_IRQHandler
-                0x0000000008000ed8                ADC1_2_IRQHandler
-                0x0000000008000ed8                SPI1_IRQHandler
-                0x0000000008000ed8                TAMPER_IRQHandler
-                0x0000000008000ed8                DMA1_Channel4_IRQHandler
-                0x0000000008000ed8                USART3_IRQHandler
-                0x0000000008000ed8                RTC_IRQHandler
-                0x0000000008000ed8                DMA1_Channel7_IRQHandler
-                0x0000000008000ed8                CAN1_RX1_IRQHandler
-                0x0000000008000ed8                I2C1_EV_IRQHandler
-                0x0000000008000ed8                DMA1_Channel6_IRQHandler
-                0x0000000008000ed8                TIM3_IRQHandler
-                0x0000000008000ed8                RCC_IRQHandler
-                0x0000000008000ed8                TIM1_TRG_COM_IRQHandler
-                0x0000000008000ed8                DMA1_Channel1_IRQHandler
-                0x0000000008000ed8                Default_Handler
-                0x0000000008000ed8                EXTI15_10_IRQHandler
-                0x0000000008000ed8                EXTI9_5_IRQHandler
-                0x0000000008000ed8                SPI2_IRQHandler
-                0x0000000008000ed8                DMA1_Channel5_IRQHandler
-                0x0000000008000ed8                EXTI4_IRQHandler
-                0x0000000008000ed8                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008000ed8                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008000ed8                DMA1_Channel3_IRQHandler
-                0x0000000008000ed8                WWDG_IRQHandler
-                0x0000000008000ed8                TIM2_IRQHandler
-                0x0000000008000ed8                TIM1_BRK_IRQHandler
-                0x0000000008000ed8                EXTI1_IRQHandler
-                0x0000000008000ed8                USART2_IRQHandler
-                0x0000000008000ed8                I2C2_ER_IRQHandler
-                0x0000000008000ed8                DMA1_Channel2_IRQHandler
-                0x0000000008000ed8                CAN1_SCE_IRQHandler
-                0x0000000008000ed8                FLASH_IRQHandler
-                0x0000000008000ed8                I2C1_ER_IRQHandler
-                0x0000000008000ed8                USBWakeUp_IRQHandler
- *fill*         0x0000000008000eda        0x2 
+                0x0000000008000f2c        0x2 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+                0x0000000008000f2c                RTC_Alarm_IRQHandler
+                0x0000000008000f2c                EXTI2_IRQHandler
+                0x0000000008000f2c                TIM1_CC_IRQHandler
+                0x0000000008000f2c                PVD_IRQHandler
+                0x0000000008000f2c                EXTI3_IRQHandler
+                0x0000000008000f2c                EXTI0_IRQHandler
+                0x0000000008000f2c                I2C2_EV_IRQHandler
+                0x0000000008000f2c                ADC1_2_IRQHandler
+                0x0000000008000f2c                SPI1_IRQHandler
+                0x0000000008000f2c                TAMPER_IRQHandler
+                0x0000000008000f2c                DMA1_Channel4_IRQHandler
+                0x0000000008000f2c                USART3_IRQHandler
+                0x0000000008000f2c                RTC_IRQHandler
+                0x0000000008000f2c                DMA1_Channel7_IRQHandler
+                0x0000000008000f2c                CAN1_RX1_IRQHandler
+                0x0000000008000f2c                I2C1_EV_IRQHandler
+                0x0000000008000f2c                DMA1_Channel6_IRQHandler
+                0x0000000008000f2c                TIM3_IRQHandler
+                0x0000000008000f2c                RCC_IRQHandler
+                0x0000000008000f2c                TIM1_TRG_COM_IRQHandler
+                0x0000000008000f2c                DMA1_Channel1_IRQHandler
+                0x0000000008000f2c                Default_Handler
+                0x0000000008000f2c                EXTI15_10_IRQHandler
+                0x0000000008000f2c                EXTI9_5_IRQHandler
+                0x0000000008000f2c                SPI2_IRQHandler
+                0x0000000008000f2c                DMA1_Channel5_IRQHandler
+                0x0000000008000f2c                EXTI4_IRQHandler
+                0x0000000008000f2c                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008000f2c                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008000f2c                DMA1_Channel3_IRQHandler
+                0x0000000008000f2c                WWDG_IRQHandler
+                0x0000000008000f2c                TIM2_IRQHandler
+                0x0000000008000f2c                TIM1_BRK_IRQHandler
+                0x0000000008000f2c                EXTI1_IRQHandler
+                0x0000000008000f2c                USART2_IRQHandler
+                0x0000000008000f2c                I2C2_ER_IRQHandler
+                0x0000000008000f2c                DMA1_Channel2_IRQHandler
+                0x0000000008000f2c                CAN1_SCE_IRQHandler
+                0x0000000008000f2c                FLASH_IRQHandler
+                0x0000000008000f2c                I2C1_ER_IRQHandler
+                0x0000000008000f2c                USBWakeUp_IRQHandler
+ *fill*         0x0000000008000f2e        0x2 
  .text.HAL_Init
-                0x0000000008000edc       0x2c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x0000000008000edc                HAL_Init
+                0x0000000008000f30       0x2c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x0000000008000f30                HAL_Init
  .text.HAL_IncTick
-                0x0000000008000f08       0x24 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x0000000008000f08                HAL_IncTick
+                0x0000000008000f5c       0x24 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x0000000008000f5c                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008000f2c       0x14 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x0000000008000f2c                HAL_GetTick
+                0x0000000008000f80       0x14 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x0000000008000f80                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008000f40       0x44 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x0000000008000f40                HAL_Delay
+                0x0000000008000f94       0x44 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x0000000008000f94                HAL_Delay
  .text.__NVIC_SetPriorityGrouping
-                0x0000000008000f84       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x0000000008000fd8       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.__NVIC_GetPriorityGrouping
-                0x0000000008000fcc       0x1c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x0000000008001020       0x1c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.__NVIC_EnableIRQ
-                0x0000000008000fe8       0x38 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x000000000800103c       0x38 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.__NVIC_SetPriority
-                0x0000000008001020       0x54 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x0000000008001074       0x54 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.NVIC_EncodePriority
-                0x0000000008001074       0x64 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x00000000080010c8       0x64 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.HAL_NVIC_SetPriorityGrouping
-                0x00000000080010d8       0x16 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x00000000080010d8                HAL_NVIC_SetPriorityGrouping
+                0x000000000800112c       0x16 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x000000000800112c                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x00000000080010ee       0x38 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x00000000080010ee                HAL_NVIC_SetPriority
+                0x0000000008001142       0x38 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x0000000008001142                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008001126       0x1c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x0000000008001126                HAL_NVIC_EnableIRQ
- *fill*         0x0000000008001142        0x2 
+                0x000000000800117a       0x1c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x000000000800117a                HAL_NVIC_EnableIRQ
+ *fill*         0x0000000008001196        0x2 
  .text.HAL_DMA_Abort_IT
-                0x0000000008001144       0xec CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
-                0x0000000008001144                HAL_DMA_Abort_IT
+                0x0000000008001198       0xec CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+                0x0000000008001198                HAL_DMA_Abort_IT
  .text.HAL_GPIO_Init
-                0x0000000008001230      0x2b4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
-                0x0000000008001230                HAL_GPIO_Init
+                0x0000000008001284      0x2b4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x0000000008001284                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x00000000080014e4       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
-                0x00000000080014e4                HAL_GPIO_WritePin
+                0x0000000008001538       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x0000000008001538                HAL_GPIO_WritePin
  .text.HAL_GPIO_TogglePin
-                0x0000000008001514       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
-                0x0000000008001514                HAL_GPIO_TogglePin
+                0x0000000008001568       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x0000000008001568                HAL_GPIO_TogglePin
  .text.HAL_RCC_OscConfig
-                0x0000000008001544      0x500 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001544                HAL_RCC_OscConfig
+                0x0000000008001598      0x500 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001598                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x0000000008001a44      0x1d4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001a44                HAL_RCC_ClockConfig
+                0x0000000008001a98      0x1d4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001a98                HAL_RCC_ClockConfig
  .text.HAL_RCC_MCOConfig
-                0x0000000008001c18       0x70 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001c18                HAL_RCC_MCOConfig
+                0x0000000008001c6c       0x70 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001c6c                HAL_RCC_MCOConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008001c88       0xc4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001c88                HAL_RCC_GetSysClockFreq
+                0x0000000008001cdc       0xc4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001cdc                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008001d4c       0x14 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001d4c                HAL_RCC_GetHCLKFreq
+                0x0000000008001da0       0x14 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001da0                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x0000000008001d60       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001d60                HAL_RCC_GetPCLK1Freq
+                0x0000000008001db4       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001db4                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x0000000008001d88       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001d88                HAL_RCC_GetPCLK2Freq
+                0x0000000008001ddc       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001ddc                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetClockConfig
-                0x0000000008001db0       0x60 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x0000000008001db0                HAL_RCC_GetClockConfig
+                0x0000000008001e04       0x60 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001e04                HAL_RCC_GetClockConfig
  .text.RCC_Delay
-                0x0000000008001e10       0x3c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000008001e64       0x3c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .text.HAL_TIM_Base_Init
-                0x0000000008001e4c       0x56 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008001e4c                HAL_TIM_Base_Init
+                0x0000000008001ea0       0x56 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001ea0                HAL_TIM_Base_Init
+ .text.HAL_TIM_Base_Start
+                0x0000000008001ef6       0x46 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001ef6                HAL_TIM_Base_Start
  .text.HAL_TIM_Base_Start_IT
-                0x0000000008001ea2       0x46 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008001ea2                HAL_TIM_Base_Start_IT
+                0x0000000008001f3c       0x46 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001f3c                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_Init
-                0x0000000008001ee8       0x56 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008001ee8                HAL_TIM_OC_Init
+                0x0000000008001f82       0x56 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001f82                HAL_TIM_OC_Init
+ .text.HAL_TIM_OC_MspInit
+                0x0000000008001fd8       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001fd8                HAL_TIM_OC_MspInit
+ *fill*         0x0000000008001fea        0x2 
+ .text.HAL_TIM_OC_Start
+                0x0000000008001fec       0x64 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008001fec                HAL_TIM_OC_Start
  .text.HAL_TIM_IRQHandler
-                0x0000000008001f3e      0x210 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008001f3e                HAL_TIM_IRQHandler
- *fill*         0x000000000800214e        0x2 
+                0x0000000008002050      0x210 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002050                HAL_TIM_IRQHandler
  .text.HAL_TIM_OC_ConfigChannel
-                0x0000000008002150       0xc0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008002150                HAL_TIM_OC_ConfigChannel
+                0x0000000008002260       0xc0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002260                HAL_TIM_OC_ConfigChannel
  .text.HAL_TIM_ConfigClockSource
-                0x0000000008002210      0x16e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008002210                HAL_TIM_ConfigClockSource
+                0x0000000008002320      0x16e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002320                HAL_TIM_ConfigClockSource
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x000000000800237e       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x000000000800237e                HAL_TIM_OC_DelayElapsedCallback
+                0x000000000800248e       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x000000000800248e                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008002390       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008002390                HAL_TIM_IC_CaptureCallback
+                0x00000000080024a0       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080024a0                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x00000000080023a2       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x00000000080023a2                HAL_TIM_PWM_PulseFinishedCallback
+                0x00000000080024b2       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080024b2                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x00000000080023b4       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x00000000080023b4                HAL_TIM_TriggerCallback
- *fill*         0x00000000080023c6        0x2 
+                0x00000000080024c4       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080024c4                HAL_TIM_TriggerCallback
+ *fill*         0x00000000080024d6        0x2 
  .text.TIM_Base_SetConfig
-                0x00000000080023c8       0xc4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x00000000080023c8                TIM_Base_SetConfig
+                0x00000000080024d8       0xc4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080024d8                TIM_Base_SetConfig
  .text.TIM_OC1_SetConfig
-                0x000000000800248c       0xcc CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x000000000800259c       0xcc CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_OC2_SetConfig
-                0x0000000008002558       0xd4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x0000000008002558                TIM_OC2_SetConfig
+                0x0000000008002668       0xd4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002668                TIM_OC2_SetConfig
  .text.TIM_OC3_SetConfig
-                0x000000000800262c       0xd4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x000000000800273c       0xd4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_OC4_SetConfig
-                0x0000000008002700       0x9c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002810       0x9c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_TI1_ConfigInputStage
-                0x000000000800279c       0x5c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080028ac       0x5c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_TI2_ConfigInputStage
-                0x00000000080027f8       0x5e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002908       0x5e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_ITRx_SetConfig
-                0x0000000008002856       0x34 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000008002966       0x34 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .text.TIM_ETR_SetConfig
-                0x000000000800288a       0x3e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
-                0x000000000800288a                TIM_ETR_SetConfig
+                0x000000000800299a       0x3e CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x000000000800299a                TIM_ETR_SetConfig
+ .text.TIM_CCxChannelCmd
+                0x00000000080029d8       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x00000000080029d8                TIM_CCxChannelCmd
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x00000000080028c8       0x88 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
-                0x00000000080028c8                HAL_TIMEx_MasterConfigSynchronization
+                0x0000000008002a20       0x88 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+                0x0000000008002a20                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x0000000008002950       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
-                0x0000000008002950                HAL_TIMEx_CommutCallback
+                0x0000000008002aa8       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+                0x0000000008002aa8                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x0000000008002962       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
-                0x0000000008002962                HAL_TIMEx_BreakCallback
+                0x0000000008002aba       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+                0x0000000008002aba                HAL_TIMEx_BreakCallback
  .text.HAL_UART_Init
-                0x0000000008002974       0x9a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x0000000008002974                HAL_UART_Init
- *fill*         0x0000000008002a0e        0x2 
+                0x0000000008002acc       0x9a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002acc                HAL_UART_Init
+ *fill*         0x0000000008002b66        0x2 
  .text.HAL_UART_IRQHandler
-                0x0000000008002a10      0x1f8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x0000000008002a10                HAL_UART_IRQHandler
+                0x0000000008002b68      0x1f8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002b68                HAL_UART_IRQHandler
  .text.HAL_UART_TxCpltCallback
-                0x0000000008002c08       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x0000000008002c08                HAL_UART_TxCpltCallback
+                0x0000000008002d60       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002d60                HAL_UART_TxCpltCallback
  .text.HAL_UART_RxCpltCallback
-                0x0000000008002c1a       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x0000000008002c1a                HAL_UART_RxCpltCallback
+                0x0000000008002d72       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002d72                HAL_UART_RxCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x0000000008002c2c       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x0000000008002c2c                HAL_UART_ErrorCallback
+                0x0000000008002d84       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002d84                HAL_UART_ErrorCallback
  .text.UART_EndRxTransfer
-                0x0000000008002c3e       0x3a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002d96       0x3a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.UART_DMAAbortOnError
-                0x0000000008002c78       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002dd0       0x28 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.UART_Transmit_IT
-                0x0000000008002ca0       0xaa CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002df8       0xaa CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.UART_EndTransmit_IT
-                0x0000000008002d4a       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002ea2       0x30 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.UART_Receive_IT
-                0x0000000008002d7a      0x102 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000008002ed2      0x102 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.UART_SetConfig
-                0x0000000008002e7c      0x1b4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .text.startup  0x0000000008003030       0x14 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x0000000008002fd4      0x1b4 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .text.startup  0x0000000008003188       0x14 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
  *(.glue_7)
- .glue_7        0x0000000008003044        0x0 linker stubs
+ .glue_7        0x000000000800319c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008003044        0x0 linker stubs
+ .glue_7t       0x000000000800319c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008003044        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x000000000800319c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008003044        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008003044                _init
- .init          0x0000000008003048        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x000000000800319c        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+                0x000000000800319c                _init
+ .init          0x00000000080031a0        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008003050        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008003050                _fini
- .fini          0x0000000008003054        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
-                0x000000000800305c                . = ALIGN (0x4)
-                0x000000000800305c                _etext = .
+ .fini          0x00000000080031a8        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+                0x00000000080031a8                _fini
+ .fini          0x00000000080031ac        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+                0x00000000080031b4                . = ALIGN (0x4)
+                0x00000000080031b4                _etext = .
 
-.vfp11_veneer   0x000000000800305c        0x0
- .vfp11_veneer  0x000000000800305c        0x0 linker stubs
+.vfp11_veneer   0x00000000080031b4        0x0
+ .vfp11_veneer  0x00000000080031b4        0x0 linker stubs
 
-.v4_bx          0x000000000800305c        0x0
- .v4_bx         0x000000000800305c        0x0 linker stubs
+.v4_bx          0x00000000080031b4        0x0
+ .v4_bx         0x00000000080031b4        0x0 linker stubs
 
-.iplt           0x000000000800305c        0x0
- .iplt          0x000000000800305c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x00000000080031b4        0x0
+ .iplt          0x00000000080031b4        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x000000000800305c       0x30
-                0x000000000800305c                . = ALIGN (0x4)
+.rodata         0x00000000080031b4       0x30
+                0x00000000080031b4                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800305c       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- *fill*         0x000000000800306e        0x2 
- .rodata        0x0000000008003070        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
-                0x0000000008003070                _global_impure_ptr
+ .rodata        0x00000000080031b4       0x12 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ *fill*         0x00000000080031c6        0x2 
+ .rodata        0x00000000080031c8        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+                0x00000000080031c8                _global_impure_ptr
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0000000008003074       0x10 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
-                0x0000000008003074                AHBPrescTable
+                0x00000000080031cc       0x10 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+                0x00000000080031cc                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008003084        0x8 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
-                0x0000000008003084                APBPrescTable
-                0x000000000800308c                . = ALIGN (0x4)
+                0x00000000080031dc        0x8 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+                0x00000000080031dc                APBPrescTable
+                0x00000000080031e4                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000800308c        0x0
- .rel.iplt      0x000000000800308c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x00000000080031e4        0x0
+ .rel.iplt      0x00000000080031e4        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.ARM.extab      0x000000000800308c        0x0
-                0x000000000800308c                . = ALIGN (0x4)
+.ARM.extab      0x00000000080031e4        0x0
+                0x00000000080031e4                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000800308c                . = ALIGN (0x4)
+                0x00000000080031e4                . = ALIGN (0x4)
 
-.ARM            0x000000000800308c        0x0
-                0x000000000800308c                . = ALIGN (0x4)
-                0x000000000800308c                __exidx_start = .
+.ARM            0x00000000080031e4        0x0
+                0x00000000080031e4                . = ALIGN (0x4)
+                0x00000000080031e4                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800308c                __exidx_end = .
-                0x000000000800308c                . = ALIGN (0x4)
+                0x00000000080031e4                __exidx_end = .
+                0x00000000080031e4                . = ALIGN (0x4)
 
-.preinit_array  0x000000000800308c        0x0
-                0x000000000800308c                . = ALIGN (0x4)
-                0x000000000800308c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00000000080031e4        0x0
+                0x00000000080031e4                . = ALIGN (0x4)
+                0x00000000080031e4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800308c                PROVIDE (__preinit_array_end = .)
-                0x000000000800308c                . = ALIGN (0x4)
+                0x00000000080031e4                PROVIDE (__preinit_array_end = .)
+                0x00000000080031e4                . = ALIGN (0x4)
 
-.init_array     0x000000000800308c        0x8
-                0x000000000800308c                . = ALIGN (0x4)
-                0x000000000800308c                PROVIDE (__init_array_start = .)
+.init_array     0x00000000080031e4        0x8
+                0x00000000080031e4                . = ALIGN (0x4)
+                0x00000000080031e4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x000000000800308c        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x00000000080031e4        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008003090        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000008003094                PROVIDE (__init_array_end = .)
-                0x0000000008003094                . = ALIGN (0x4)
+ .init_array    0x00000000080031e8        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x00000000080031ec                PROVIDE (__init_array_end = .)
+                0x00000000080031ec                . = ALIGN (0x4)
 
-.fini_array     0x0000000008003094        0x4
-                0x0000000008003094                . = ALIGN (0x4)
-                0x0000000008003094                PROVIDE (__fini_array_start = .)
+.fini_array     0x00000000080031ec        0x4
+                0x00000000080031ec                . = ALIGN (0x4)
+                0x00000000080031ec                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008003094        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000008003098                PROVIDE (__fini_array_end = .)
-                0x0000000008003098                . = ALIGN (0x4)
-                0x0000000008003098                _sidata = LOADADDR (.data)
+ .fini_array    0x00000000080031ec        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x00000000080031f0                PROVIDE (__fini_array_end = .)
+                0x00000000080031f0                . = ALIGN (0x4)
+                0x00000000080031f0                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x43c load address 0x0000000008003098
+.data           0x0000000020000000      0x43c load address 0x00000000080031f0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -1291,17 +1290,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
                 0x000000002000043c                _edata = .
 
 .tm_clone_table
-                0x000000002000043c        0x0 load address 0x00000000080034d4
+                0x000000002000043c        0x0 load address 0x000000000800362c
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x000000002000043c        0x0 load address 0x00000000080034d4
+.igot.plt       0x000000002000043c        0x0 load address 0x000000000800362c
  .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x000000002000043c                . = ALIGN (0x4)
 
-.bss            0x000000002000043c      0x160 load address 0x00000000080034d4
+.bss            0x000000002000043c      0x160 load address 0x000000000800362c
                 0x000000002000043c                _sbss = .
                 0x000000002000043c                __bss_start__ = _sbss
  *(.bss)
@@ -1325,7 +1324,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
                 0x000000002000059c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x000000002000059c      0x604 load address 0x00000000080034d4
+                0x000000002000059c      0x604 load address 0x000000000800362c
                 0x00000000200005a0                . = ALIGN (0x8)
  *fill*         0x000000002000059c        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -1428,209 +1427,209 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/libgcc.a
  .comment       0x000000000000004e       0x4f /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
  .comment       0x000000000000004e       0x4f /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000     0xe226
- .debug_info    0x0000000000000000      0xe1e CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
- .debug_info    0x0000000000000e1e      0x2c2 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
- .debug_info    0x00000000000010e0      0xd93 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_info    0x0000000000001e73      0x937 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
- .debug_info    0x00000000000027aa      0x9ae CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_info    0x0000000000003158      0x43e CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_info    0x0000000000003596       0x22 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_info    0x00000000000035b8      0x723 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_info    0x0000000000003cdb      0xba1 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_info    0x000000000000487c      0x7e3 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
- .debug_info    0x000000000000505f      0x6aa CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_info    0x0000000000005709      0x847 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_info    0x0000000000005f50     0x2639 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .debug_info    0x0000000000008589     0x11cb CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_info    0x0000000000009754     0x12ab CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_info    0x000000000000a9ff      0x995 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
- .debug_info    0x000000000000b394      0x102 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
- .debug_info    0x000000000000b496      0x92a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
- .debug_info    0x000000000000bdc0      0x11a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
- .debug_info    0x000000000000beda      0xf21 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
- .debug_info    0x000000000000cdfb      0x9d5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
- .debug_info    0x000000000000d7d0      0xa56 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+.debug_info     0x0000000000000000     0xe1ec
+ .debug_info    0x0000000000000000      0xe2e CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x0000000000000e2e      0x2c2 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+ .debug_info    0x00000000000010f0      0xd49 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_info    0x0000000000001e39      0x937 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_info    0x0000000000002770      0x9ae CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_info    0x000000000000311e      0x43e CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_info    0x000000000000355c       0x22 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_info    0x000000000000357e      0x723 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_info    0x0000000000003ca1      0xba1 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_info    0x0000000000004842      0x7e3 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_info    0x0000000000005025      0x6aa CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_info    0x00000000000056cf      0x847 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_info    0x0000000000005f16     0x2639 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_info    0x000000000000854f     0x11cb CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_info    0x000000000000971a     0x12ab CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_info    0x000000000000a9c5      0x995 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_info    0x000000000000b35a      0x102 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+ .debug_info    0x000000000000b45c      0x92a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+ .debug_info    0x000000000000bd86      0x11a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+ .debug_info    0x000000000000bea0      0xf21 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+ .debug_info    0x000000000000cdc1      0x9d5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_info    0x000000000000d796      0xa56 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_abbrev   0x0000000000000000     0x29a3
+.debug_abbrev   0x0000000000000000     0x295a
  .debug_abbrev  0x0000000000000000      0x275 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .debug_abbrev  0x0000000000000275      0x15c CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
- .debug_abbrev  0x00000000000003d1      0x20e CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_abbrev  0x00000000000005df      0x1bc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
- .debug_abbrev  0x000000000000079b      0x173 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_abbrev  0x000000000000090e      0x14b CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_abbrev  0x0000000000000a59       0x12 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_abbrev  0x0000000000000a6b      0x1fd CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_abbrev  0x0000000000000c68      0x310 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_abbrev  0x0000000000000f78      0x225 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
- .debug_abbrev  0x000000000000119d      0x1e5 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_abbrev  0x0000000000001382      0x270 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_abbrev  0x00000000000015f2      0x25b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .debug_abbrev  0x000000000000184d      0x249 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_abbrev  0x0000000000001a96      0x26d CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_abbrev  0x0000000000001d03      0x232 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
- .debug_abbrev  0x0000000000001f35       0xcf /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
- .debug_abbrev  0x0000000000002004      0x1b8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
- .debug_abbrev  0x00000000000021bc       0xcc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
- .debug_abbrev  0x0000000000002288      0x217 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
- .debug_abbrev  0x000000000000249f      0x252 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
- .debug_abbrev  0x00000000000026f1      0x2b2 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00000000000003d1      0x1c5 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_abbrev  0x0000000000000596      0x1bc CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_abbrev  0x0000000000000752      0x173 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_abbrev  0x00000000000008c5      0x14b CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_abbrev  0x0000000000000a10       0x12 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_abbrev  0x0000000000000a22      0x1fd CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_abbrev  0x0000000000000c1f      0x310 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000000000000f2f      0x225 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_abbrev  0x0000000000001154      0x1e5 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_abbrev  0x0000000000001339      0x270 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_abbrev  0x00000000000015a9      0x25b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_abbrev  0x0000000000001804      0x249 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x0000000000001a4d      0x26d CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_abbrev  0x0000000000001cba      0x232 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000001eec       0xcf /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+ .debug_abbrev  0x0000000000001fbb      0x1b8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000002173       0xcc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+ .debug_abbrev  0x000000000000223f      0x217 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000002456      0x252 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_abbrev  0x00000000000026a8      0x2b2 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_aranges  0x0000000000000000      0xcd8
+.debug_aranges  0x0000000000000000      0xcc8
  .debug_aranges
                 0x0000000000000000       0x60 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .debug_aranges
                 0x0000000000000060       0x38 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
  .debug_aranges
-                0x0000000000000098       0x58 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x0000000000000098       0x48 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  .debug_aranges
-                0x00000000000000f0       0x30 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+                0x00000000000000e0       0x30 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
  .debug_aranges
-                0x0000000000000120       0x78 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0000000000000110       0x78 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
  .debug_aranges
-                0x0000000000000198       0x28 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+                0x0000000000000188       0x28 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
  .debug_aranges
-                0x00000000000001c0       0x28 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+                0x00000000000001b0       0x28 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
  .debug_aranges
-                0x00000000000001e8       0xe0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x00000000000001d8       0xe0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
  .debug_aranges
-                0x00000000000002c8      0x100 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x00000000000002b8      0x100 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .debug_aranges
-                0x00000000000003c8       0x80 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+                0x00000000000003b8       0x80 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
  .debug_aranges
-                0x0000000000000448       0x58 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x0000000000000438       0x58 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
  .debug_aranges
-                0x00000000000004a0       0x90 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0000000000000490       0x90 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .debug_aranges
-                0x0000000000000530      0x3a8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+                0x0000000000000520      0x3a8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  .debug_aranges
-                0x00000000000008d8      0x150 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+                0x00000000000008c8      0x150 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
  .debug_aranges
-                0x0000000000000a28      0x1d0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0000000000000a18      0x1d0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .debug_aranges
-                0x0000000000000bf8       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+                0x0000000000000be8       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
  .debug_aranges
-                0x0000000000000c18       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+                0x0000000000000c08       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
  .debug_aranges
-                0x0000000000000c38       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000000000c28       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
  .debug_aranges
-                0x0000000000000c50       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+                0x0000000000000c40       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
  .debug_aranges
-                0x0000000000000c70       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000000000c60       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
  .debug_aranges
-                0x0000000000000c90       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+                0x0000000000000c80       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
  .debug_aranges
-                0x0000000000000cb0       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x0000000000000ca0       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_ranges   0x0000000000000000      0xb48
+.debug_ranges   0x0000000000000000      0xb38
  .debug_ranges  0x0000000000000000       0x50 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .debug_ranges  0x0000000000000050       0x28 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
- .debug_ranges  0x0000000000000078       0x48 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_ranges  0x00000000000000c0       0x20 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
- .debug_ranges  0x00000000000000e0       0x68 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_ranges  0x0000000000000148       0x18 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_ranges  0x0000000000000160       0x20 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_ranges  0x0000000000000180       0xd0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_ranges  0x0000000000000250       0xf0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_ranges  0x0000000000000340       0x70 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
- .debug_ranges  0x00000000000003b0       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_ranges  0x00000000000003f8       0x80 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_ranges  0x0000000000000478      0x398 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .debug_ranges  0x0000000000000810      0x140 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_ranges  0x0000000000000950      0x1c0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_ranges  0x0000000000000b10       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_ranges  0x0000000000000078       0x38 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_ranges  0x00000000000000b0       0x20 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_ranges  0x00000000000000d0       0x68 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_ranges  0x0000000000000138       0x18 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_ranges  0x0000000000000150       0x20 CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_ranges  0x0000000000000170       0xd0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_ranges  0x0000000000000240       0xf0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_ranges  0x0000000000000330       0x70 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_ranges  0x00000000000003a0       0x48 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_ranges  0x00000000000003e8       0x80 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_ranges  0x0000000000000468      0x398 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_ranges  0x0000000000000800      0x140 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_ranges  0x0000000000000940      0x1c0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_ranges  0x0000000000000b00       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_line     0x0000000000000000     0x8195
- .debug_line    0x0000000000000000      0x474 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
- .debug_line    0x0000000000000474      0x277 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
- .debug_line    0x00000000000006eb      0x336 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_line    0x0000000000000a21      0x26e CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
- .debug_line    0x0000000000000c8f      0x2f7 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_line    0x0000000000000f86      0x260 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_line    0x00000000000011e6       0x9f CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_line    0x0000000000001285      0x472 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_line    0x00000000000016f7      0x64c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_line    0x0000000000001d43      0x8f6 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
- .debug_line    0x0000000000002639      0x54b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_line    0x0000000000002b84      0x8de CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_line    0x0000000000003462     0x2356 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .debug_line    0x00000000000057b8      0xc9c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_line    0x0000000000006454     0x129a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_line    0x00000000000076ee      0x14a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
- .debug_line    0x0000000000007838       0xd7 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
- .debug_line    0x000000000000790f       0xe3 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
- .debug_line    0x00000000000079f2      0x114 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
- .debug_line    0x0000000000007b06      0x26b /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
- .debug_line    0x0000000000007d71      0x1e7 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
- .debug_line    0x0000000000007f58      0x23d /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+.debug_line     0x0000000000000000     0x81a3
+ .debug_line    0x0000000000000000      0x497 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x0000000000000497      0x277 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
+ .debug_line    0x000000000000070e      0x31e CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_line    0x0000000000000a2c      0x271 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_line    0x0000000000000c9d      0x2f7 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_line    0x0000000000000f94      0x260 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_line    0x00000000000011f4       0x9f CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x0000000000001293      0x472 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_line    0x0000000000001705      0x64c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_line    0x0000000000001d51      0x8f6 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_line    0x0000000000002647      0x54b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_line    0x0000000000002b92      0x8de CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_line    0x0000000000003470     0x2356 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_line    0x00000000000057c6      0xc9c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_line    0x0000000000006462     0x129a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_line    0x00000000000076fc      0x14a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_line    0x0000000000007846       0xd7 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+ .debug_line    0x000000000000791d       0xe3 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+ .debug_line    0x0000000000007a00      0x114 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+ .debug_line    0x0000000000007b14      0x26b /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+ .debug_line    0x0000000000007d7f      0x1e7 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000007f66      0x23d /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_str      0x0000000000000000     0x403d
+.debug_str      0x0000000000000000     0x4035
  .debug_str     0x0000000000000000      0xae0 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
                                         0xb78 (size before relaxing)
  .debug_str     0x0000000000000ae0       0x61 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
                                         0x2e0 (size before relaxing)
- .debug_str     0x0000000000000b41      0x3ee CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                                        0xc33 (size before relaxing)
- .debug_str     0x0000000000000f2f       0xc5 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_str     0x0000000000000b41      0x3be CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                                        0xc03 (size before relaxing)
+ .debug_str     0x0000000000000eff       0xc5 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
                                         0xa5a (size before relaxing)
- .debug_str     0x0000000000000ff4       0xfb CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_str     0x0000000000000fc4       0xfb CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
                                         0x8dc (size before relaxing)
- .debug_str     0x00000000000010ef       0xc1 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_str     0x00000000000010bf       0xc1 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
                                         0x35c (size before relaxing)
- .debug_str     0x00000000000011b0       0x4f CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_str     0x0000000000001180       0x4f CMakeFiles/cube.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
                                          0x6d (size before relaxing)
- .debug_str     0x00000000000011ff      0x237 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_str     0x00000000000011cf      0x237 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
                                         0x830 (size before relaxing)
- .debug_str     0x0000000000001436      0x3c7 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_str     0x0000000000001406      0x3c7 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
                                         0x997 (size before relaxing)
- .debug_str     0x00000000000017fd      0x25a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_str     0x00000000000017cd      0x25a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
                                         0x6d9 (size before relaxing)
- .debug_str     0x0000000000001a57      0x160 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_str     0x0000000000001a27      0x160 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
                                         0x4dd (size before relaxing)
- .debug_str     0x0000000000001bb7      0x22b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_str     0x0000000000001b87      0x22b CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
                                         0x698 (size before relaxing)
- .debug_str     0x0000000000001de2      0xcf7 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_str     0x0000000000001db2      0xd1f CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
                                        0x14bb (size before relaxing)
- .debug_str     0x0000000000002ad9      0x54a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_str     0x0000000000002ad1      0x54a CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
                                         0xcbb (size before relaxing)
- .debug_str     0x0000000000003023      0x531 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_str     0x000000000000301b      0x531 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
                                         0xbdf (size before relaxing)
- .debug_str     0x0000000000003554      0x518 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_str     0x000000000000354c      0x518 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
                                         0x5e3 (size before relaxing)
- .debug_str     0x0000000000003a6c       0xc4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+ .debug_str     0x0000000000003a64       0xc4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
                                         0x1f2 (size before relaxing)
- .debug_str     0x0000000000003b30       0x97 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
+ .debug_str     0x0000000000003b28       0x97 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-impure.o)
                                         0x598 (size before relaxing)
- .debug_str     0x0000000000003bc7       0x96 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+ .debug_str     0x0000000000003bbf       0x96 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
                                         0x21c (size before relaxing)
- .debug_str     0x0000000000003c5d      0x313 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+ .debug_str     0x0000000000003c55      0x313 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
                                         0x8c5 (size before relaxing)
- .debug_str     0x0000000000003f70       0x54 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_str     0x0000000000003f68       0x54 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
                                         0x601 (size before relaxing)
- .debug_str     0x0000000000003fc4       0x79 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_str     0x0000000000003fbc       0x79 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
                                         0x614 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x323c
+.debug_frame    0x0000000000000000     0x31ec
  .debug_frame   0x0000000000000000      0x144 CMakeFiles/cube.elf.dir/Core/Src/main.c.obj
  .debug_frame   0x0000000000000144       0xa4 CMakeFiles/cube.elf.dir/Core/Src/sid.c.obj
- .debug_frame   0x00000000000001e8      0x13c CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_frame   0x0000000000000324       0x74 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
- .debug_frame   0x0000000000000398      0x164 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_frame   0x00000000000004fc       0x58 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_frame   0x0000000000000554      0x334 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_frame   0x0000000000000888      0x428 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_frame   0x0000000000000cb0      0x208 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
- .debug_frame   0x0000000000000eb8      0x14c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_frame   0x0000000000001004      0x21c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_frame   0x0000000000001220     0x10e8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
- .debug_frame   0x0000000000002308      0x5c0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
- .debug_frame   0x00000000000028c8      0x834 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_frame   0x00000000000030fc       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
- .debug_frame   0x000000000000311c       0x34 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
- .debug_frame   0x0000000000003150       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
- .debug_frame   0x000000000000317c       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
- .debug_frame   0x00000000000031b4       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
- .debug_frame   0x00000000000031ec       0x50 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000001e8       0xec CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_frame   0x00000000000002d4       0x74 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj
+ .debug_frame   0x0000000000000348      0x164 CMakeFiles/cube.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_frame   0x00000000000004ac       0x58 CMakeFiles/cube.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_frame   0x0000000000000504      0x334 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_frame   0x0000000000000838      0x428 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_frame   0x0000000000000c60      0x208 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
+ .debug_frame   0x0000000000000e68      0x14c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_frame   0x0000000000000fb4      0x21c CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_frame   0x00000000000011d0     0x10e8 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
+ .debug_frame   0x00000000000022b8      0x5c0 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+ .debug_frame   0x0000000000002878      0x834 CMakeFiles/cube.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_frame   0x00000000000030ac       0x20 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_frame   0x00000000000030cc       0x34 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-fini.o)
+ .debug_frame   0x0000000000003100       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-init.o)
+ .debug_frame   0x000000000000312c       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000003164       0x38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_frame   0x000000000000319c       0x50 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-__call_atexit.o)
 
 .debug_loc      0x0000000000000000      0x607
  .debug_loc     0x0000000000000000       0x32 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(lib_a-atexit.o)
