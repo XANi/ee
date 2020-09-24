@@ -63,6 +63,59 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint8_t UART1_rxBuffer[12] = {0};
+uint8_t last_midi[12] = {0};
+uint8_t update_voices =0 ;
+uint8_t midi_channel = 13;
+uint8_t MIDI_STATE = 0;
+uint8_t MIDI_CMD = 0;
+uint8_t ch1_note = 0;
+uint8_t ch1_on = 0;
+#define MIDI_IDLE 0
+#define MIDI_CMD_NOTE_OFF              0b10000000
+#define MIDI_CMD_NOTE_ON               0b10010000
+#define MIDI_CMD_NOTE_POLY_AFTERTOUCH  0b10100000
+#define MIDI_CMD_CC                    0b10110000
+#define MIDI_CMD_PC                    0b11000000
+#define MIDI_CMD_PITCH_BEND            0b11100000
+#define MIDI_CMD_CHANNEL_MODE_MSG      0b10110000
+
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    HAL_UART_Receive_IT(&huart1, UART1_rxBuffer, 1);
+
+    uint8_t b = UART1_rxBuffer[0];
+    uint8_t m_chan = b & 0x0f;
+    uint8_t m_cmd = b & 0xf0;
+    if (MIDI_STATE == MIDI_IDLE) {
+        if (m_chan != midi_channel) {
+            return;
+        }
+        if (m_cmd == MIDI_CMD_NOTE_ON) {
+            MIDI_STATE = MIDI_CMD_NOTE_ON;
+        }
+        if (m_cmd == MIDI_CMD_NOTE_OFF) {
+            MIDI_STATE = MIDI_CMD_NOTE_OFF;
+        }
+        last_midi[0] = b;
+    } else if (MIDI_STATE == MIDI_CMD_NOTE_ON) {
+        last_midi[1] = b;
+        if (b < 128) {
+            ch1_note = b;
+            ch1_on = 1;
+        }
+        update_voices = 1;
+        MIDI_STATE = MIDI_IDLE;
+    } else if (MIDI_STATE == MIDI_CMD_NOTE_OFF) {
+        last_midi[1] = b;
+        if (b < 128) {
+            ch1_note = b;
+            ch1_on = 0;
+        }
+        update_voices = 1;
+        MIDI_STATE = MIDI_IDLE;
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -105,21 +158,24 @@ int main(void)
   HAL_TIM_OC_Start(&htim3,TIM_CHANNEL_2);
   HAL_TIM_Base_Start_IT(&htim1);
   HAL_TIM_Base_Start(&htim3);
+
+  MX_USART1_UART_Init();
+
+  HAL_UART_Receive_IT (&huart1, UART1_rxBuffer, 1);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  HAL_Delay(2000);
+  sidplay(10);
   while (1) {
-      HAL_GPIO_WritePin(SID_RST_GPIO_Port,SID_RST_Pin,1);
-      for (uint8_t i = 0; i < 200; i=i+1) {
-          sidplay(i);
-      HAL_Delay(10);
+      if (update_voices > 0) {
+          update_voices=0;
+          sid_note(ch1_note,ch1_on,127);
+          HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
       }
-
-
-
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

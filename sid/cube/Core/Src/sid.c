@@ -5,7 +5,7 @@
 #include "sid_notes.h"
 // 0x00 (54272) 	frequency voice 1 low byte
 // 0x01 (54273) 	frequency voice 1 high byte
-#define SID_V1_FREQ_WORD ((uint8_t)0x00
+#define SID_V1_FREQ_WORD ((uint8_t)0x00)
 #define SID_V1_FREQ_LOW ((uint8_t)0x00)
 #define SID_V1_FREQ_HIGH ((uint8_t)0x01)
 // 0x02 (54274) 	pulse wave duty cycle voice 1 low byte
@@ -122,7 +122,7 @@ void sidplay(uint8_t v) {
 
     sidwrite(SID_V1_AD_4bit, SID_DecayRelease_72ms);
     sidwrite(SID_V1_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_C_3);
+    sidwrite16(SID_V1_FREQ_LOW, SID_Midi_Notes[36]);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
     HAL_Delay(100);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
@@ -183,4 +183,12 @@ void sidplay(uint8_t v) {
     HAL_Delay(50);
 
     HAL_Delay(1000);
+}
+void sid_note(uint8_t note, uint8_t on, uint8_t velocity) {
+    sidwrite16(SID_V1_FREQ_WORD, SID_Midi_Notes[note]);
+    if (on > 0) {
+        sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    } else {
+        sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    }
 }

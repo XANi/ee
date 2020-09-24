@@ -1,6 +1,7 @@
 cube.elf
 cube.hex
-
+cube.bin
+cube.map
 
 # cmake stuff
 

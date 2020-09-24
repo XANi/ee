@@ -6,6 +6,7 @@
 #define CUBE_SID_H
 
 void sidplay(uint8_t);
+void sid_note(uint8_t note, uint8_t on, uint8_t velocity);
 
 
 
