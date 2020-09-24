@@ -21,6 +21,7 @@
 #define SID_V1_SR_4bit ((uint8_t)0x06)
 // 0x07 (54279) 	frequency voice 2 low byte
 // 0x08 (54280) 	frequency voice 2 high byte
+#define SID_V2_FREQ_WORD ((uint8_t)0x07)
 #define SID_V2_FREQ_LOW ((uint8_t)0x07)
 #define SID_V2_FREQ_HIGH ((uint8_t)0x08)
 // 0x09 (54281) 	pulse wave duty cycle voice 2 low byte
@@ -36,6 +37,7 @@
 #define SID_V2_SR_4bit ((uint8_t)0x0d)
 // 0x0e (54286) 	frequency voice 3 low byte
 // 0x0f (54287) 	frequency voice 3 high byte
+#define SID_V3_FREQ_WORD ((uint8_t)0x0e)
 #define SID_V3_FREQ_LOW ((uint8_t)0x0e)
 #define SID_V3_FREQ_HIGH ((uint8_t)0x0f)
 // 0x10 (54288) 	pulse wave duty cycle voice 3 low byte
@@ -45,14 +47,18 @@
 // 	7 	6 	5 	4 	3 	2 	1 	0
 // 	noise 	pulse 	sawtooth 	triangle 	test 	ring modulation with voice 2 	synchronize with voice 2 	gate
 // 	7..4 	3..0
+#define SID_V3_CTRL_REG   ((uint8_t)0x12)
 // 0x13 (54291) 	attack duration 	decay duration voice 3
 // 0x14 (54292) 	sustain level 	release duration voice 3
+#define SID_V3_AD_4bit ((uint8_t)0x13)
+// 0x0d (54285) 	sustain level 	release duration voice 2
+#define SID_V3_SR_4bit ((uint8_t)0x14)
 // 0x15 (54293) 	— 	filter cutoff frequency low byte
 // 0x16 (54294) 	filter cutoff frequency high byte
 // 0x17 (54295) 	filter resonance and routing
 // 	7..4 	3 	2 	1 	0
 // 	filter resonance 	external input 	voice 3 	voice 2 	voice 1
-#define SID_FILTER_RES ((uint8_t)0x18)
+#define SID_FILTER_RES ((uint8_t)0x17)
 // 0x18 (54296) 	filter mode and main volume control
 #define SID_FILTER ((uint8_t)0x18)
 // 	7 	6 	5 	4 	3..0
@@ -113,67 +119,103 @@ void sidwrite(uint8_t addr, uint8_t data) {
 
 void sidwrite16(uint8_t addr, uint16_t data) {
     sidwrite(addr, (uint8_t) (data & 0xff));
-    sidwrite(SID_V1_FREQ_HIGH, (uint8_t) (data >> 8));
+    sidwrite(addr+1, (uint8_t) (data >> 8));
+}
+
+void sidinit() {
+    HAL_GPIO_WritePin(SID_RST_GPIO_Port,SID_RST_Pin,1);
+    sidwrite(SID_FILTER, 0b00010111);
+    sidwrite(SID_V1_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V1_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    sidwrite(SID_V2_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V2_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    sidwrite(SID_V3_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V3_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+
 }
 //c---D---f--D--f-f---A-G-gf
 void sidplay(uint8_t v) {
+    HAL_GPIO_WritePin(SID_RST_GPIO_Port,SID_RST_Pin,1);
     sidwrite(SID_FILTER_RES, 0b11110000);
     sidwrite(SID_FILTER, 0b00010111);
 
     sidwrite(SID_V1_AD_4bit, SID_DecayRelease_72ms);
     sidwrite(SID_V1_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    sidwrite(SID_V2_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V2_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    sidwrite(SID_V2_AD_4bit, SID_DecayRelease_72ms);
+    sidwrite(SID_V2_SR_4bit, 0b1000000 + SID_DecayRelease_24ms);
+    HAL_Delay(500);
+
     sidwrite16(SID_V1_FREQ_LOW, SID_Midi_Notes[36]);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+
+    sidwrite16(SID_V2_FREQ_LOW, SID_Midi_Notes[36+7]);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_TRIANGLE | SID_CTRL_GATE);
+
     HAL_Delay(100);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_SAW);
     HAL_Delay(100);
 
     sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Dh_3);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    sidwrite16(SID_V2_FREQ_LOW, SID_NOTE_Dh_4);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_TRIANGLE | SID_CTRL_GATE);
     HAL_Delay(100);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_TRIANGLE);
     HAL_Delay(100);
 
     sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    sidwrite16(SID_V2_FREQ_LOW, SID_NOTE_F_4);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_TRIANGLE | SID_CTRL_GATE);
     HAL_Delay(70);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_TRIANGLE);
     HAL_Delay(70);
 
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Dh_3);
+    sidwrite16(SID_V2_FREQ_LOW, SID_NOTE_Dh_3);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(70);
+    sidwrite(SID_V2_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(70);
+
+    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_4);
+    sidwrite16(SID_V3_FREQ_LOW, SID_NOTE_F_3);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
-    HAL_Delay(70);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
-    HAL_Delay(70);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(50);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(50);
 
     sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
+    sidwrite16(SID_V3_FREQ_LOW, SID_NOTE_F_4);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
     HAL_Delay(50);
     sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
-    HAL_Delay(50);
-
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
-    HAL_Delay(50);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
     HAL_Delay(200);
 
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Ah_3);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    sidwrite16(SID_V3_FREQ_LOW, SID_NOTE_Ah_3);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
     HAL_Delay(100);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
-    HAL_Delay(100);
-
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_Gh_3);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
-    HAL_Delay(100);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
     HAL_Delay(100);
 
-    sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_G_3);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    sidwrite16(SID_V3_FREQ_LOW, SID_NOTE_Gh_3);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+    HAL_Delay(100);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
+    HAL_Delay(100);
+
+    sidwrite16(SID_V3_FREQ_LOW, SID_NOTE_G_3);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
     HAL_Delay(50);
-    sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+    sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
     HAL_Delay(50);
 
     sidwrite16(SID_V1_FREQ_LOW, SID_NOTE_F_3);
@@ -184,11 +226,28 @@ void sidplay(uint8_t v) {
 
     HAL_Delay(1000);
 }
-void sid_note(uint8_t note, uint8_t on, uint8_t velocity) {
-    sidwrite16(SID_V1_FREQ_WORD, SID_Midi_Notes[note]);
-    if (on > 0) {
-        sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
-    } else {
-        sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+void sid_note(uint8_t chan, uint8_t note, uint8_t on, uint8_t velocity) {
+    if (chan == 1) {
+        sidwrite16(SID_V1_FREQ_WORD, SID_Midi_Notes[note]);
+        if (on > 0) {
+            sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+        } else {
+            sidwrite(SID_V1_CTRL_REG, SID_CTRL_SAW);
+        }
+    }
+    else if (chan == 2) {
+        sidwrite16(SID_V2_FREQ_WORD, SID_Midi_Notes[note]);
+        if (on > 0) {
+            sidwrite(SID_V2_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+        } else {
+            sidwrite(SID_V2_CTRL_REG, SID_CTRL_SAW);
+        }
+    } else if (chan == 3) {
+        sidwrite16(SID_V3_FREQ_WORD, SID_Midi_Notes[note]);
+        if (on > 0) {
+            sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW | SID_CTRL_GATE);
+        } else {
+            sidwrite(SID_V3_CTRL_REG, SID_CTRL_SAW);
+        }
     }
 }

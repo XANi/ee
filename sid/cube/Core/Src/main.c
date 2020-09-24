@@ -71,6 +71,11 @@ uint8_t MIDI_STATE = 0;
 uint8_t MIDI_CMD = 0;
 uint8_t ch1_note = 0;
 uint8_t ch1_on = 0;
+uint8_t ch2_note = 0;
+uint8_t ch2_on = 0;
+uint8_t ch3_note = 0;
+uint8_t ch3_on = 0;
+static volatile uint8_t last_ch = 1;
 #define MIDI_IDLE 0
 #define MIDI_CMD_NOTE_OFF              0b10000000
 #define MIDI_CMD_NOTE_ON               0b10010000
@@ -81,6 +86,32 @@ uint8_t ch1_on = 0;
 #define MIDI_CMD_CHANNEL_MODE_MSG      0b10110000
 
 
+void update_ch(uint8_t ch,uint8_t note, uint8_t on) {
+    if (on == 0) {
+        if (ch1_note == note) {
+            ch1_on = 0;
+            return;
+        } else if (ch2_note == note) {
+            ch2_on = 0;
+            return;
+        } else if (ch3_note == note) {
+            ch3_on = 0;
+            return;
+        }
+    }
+    if (ch == 1) {
+        ch1_note = note;
+        ch1_on = on;
+    }
+    if (ch == 2) {
+        ch2_note = note;
+        ch2_on = on;
+    }
+    if (ch == 3) {
+        ch3_note = note;
+        ch3_on = on;
+    }
+}
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     HAL_UART_Receive_IT(&huart1, UART1_rxBuffer, 1);
 
@@ -101,20 +132,24 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     } else if (MIDI_STATE == MIDI_CMD_NOTE_ON) {
         last_midi[1] = b;
         if (b < 128) {
-            ch1_note = b;
-            ch1_on = 1;
+            update_ch(last_ch, b, 1);
+            last_ch++;
         }
         update_voices = 1;
         MIDI_STATE = MIDI_IDLE;
     } else if (MIDI_STATE == MIDI_CMD_NOTE_OFF) {
         last_midi[1] = b;
         if (b < 128) {
-            ch1_note = b;
-            ch1_on = 0;
+            update_ch(last_ch, b, 0);
         }
         update_voices = 1;
         MIDI_STATE = MIDI_IDLE;
     }
+    if (last_ch > 3) {
+        uint8_t z = last_ch;
+        last_ch = 1;
+
+    };
 }
 
 /* USER CODE END 0 */
@@ -170,10 +205,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   HAL_Delay(2000);
   sidplay(10);
+  sidinit();
   while (1) {
       if (update_voices > 0) {
           update_voices=0;
-          sid_note(ch1_note,ch1_on,127);
+          sid_note(1,ch1_note,ch1_on,127);
+          sid_note(2,ch2_note,ch2_on,127);
+          sid_note(3,ch3_note,ch3_on,127);
           HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
       }
     /* USER CODE END WHILE */
