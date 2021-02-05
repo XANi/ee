@@ -88,8 +88,8 @@ void sidwrite(uint8_t addr, uint8_t data) {
     HAL_GPIO_WritePin(SID_CS_GPIO_Port, SID_CS_Pin, 1);
    // HAL_GPIO_WritePin(SID_CLOCK_GPIO_Port, SID_CLOCK_Pin, 0);
     // write data
-    uint16_t set_bits = data << 8u;
-    uint16_t reset_bits = (data ^ 0xff) << 8u;
+    uint16_t set_bits = data << 8;
+    uint16_t reset_bits = (data ^ 0xff) << 8;
     uint32_t bsrr = (reset_bits << 16) | set_bits;
     GPIOB->BSRR = bsrr;
 //    HAL_GPIO_WritePin(SID_D0_GPIO_Port,SID_D0_Pin,(data & 0x00000001) > 0);

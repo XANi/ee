@@ -240,6 +240,9 @@
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
 			<Option target="cube.elf"/>
 		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="cube.elf"/>
+		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
 			<Option target="cube.elf"/>
 		</Unit>
@@ -277,6 +280,9 @@
 			<Option target="cube.elf"/>
 		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="cube.elf"/>
+		</Unit>
+		<Unit filename="/home/xani/src/my/ee/sid/cube/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
 			<Option target="cube.elf"/>
 		</Unit>
 		<Unit filename="/home/xani/src/my/ee/sid/cube/STM32F103C8TX_FLASH.ld">

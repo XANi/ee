@@ -2,37 +2,37 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="efm32-test" targetName="efm32-test" />
-      <config projectName="efm32-test" targetName="debug" />
-      <config projectName="efm32-test" targetName="emlib" />
+      <config projectName="efm32-test" targetName="d" />
+      <config projectName="efm32-test" targetName="e" />
+      <config projectName="efm32-test" targetName="f" />
       <config projectName="efm32-test" targetName="erase" />
       <config projectName="efm32-test" targetName="ds" />
-      <config projectName="efm32-test" targetName="f" />
-      <config projectName="efm32-test" targetName="e" />
-      <config projectName="efm32-test" targetName="d" />
-      <config projectName="efm32-test" targetName="device" />
+      <config projectName="efm32-test" targetName="debug-server" />
       <config projectName="efm32-test" targetName="r" />
+      <config projectName="efm32-test" targetName="efm32-test" />
+      <config projectName="efm32-test" targetName="device" />
+      <config projectName="efm32-test" targetName="emlib" />
       <config projectName="efm32-test" targetName="flash" />
       <config projectName="efm32-test" targetName="reset" />
-      <config projectName="efm32-test" targetName="debug-server" />
+      <config projectName="efm32-test" targetName="debug" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e51b9b-1bf0-4c4a-97cd-4a57afe6642e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../thermometer/board/board.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thermometer/drivers/drivers.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thermometer/drivers/src/displayls013b7dh03.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thermometer/graphics/graphics.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sid/cube/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sid/cube/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sid/cube/Core/Src/sid.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sid/cube/Core/Src/sid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sid/cube/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../sid/cube/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sid/cube/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sid/cube/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sid/cube/cube.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../sid/cube/cube.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thermometer/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thermometer/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../thermometer/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,12 +102,16 @@
       </list>
     </option>
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="6b3zpt30" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1918" />
     <option name="y" value="-1" />
     <option name="width" value="1924" />
     <option name="height" value="1063" />
   </component>
+  <component name="ProjectId" id="1mffuvhwpKdq6qgJzBB94pzylDG" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -145,10 +149,17 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../thermometer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -158,87 +169,85 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="CMake Application.Build All">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="d" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="d" CONFIG_NAME="Debug">
+    <configuration name="d" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="d" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="debug-server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="debug-server" CONFIG_NAME="Debug">
+    <configuration name="debug-server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="debug-server" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="debug" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="debug" CONFIG_NAME="Debug">
+    <configuration name="debug" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="debug" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="device" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="device" CONFIG_NAME="Debug">
+    <configuration name="device" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="device" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ds" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="ds" CONFIG_NAME="Debug">
+    <configuration name="ds" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="ds" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="e" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="e" CONFIG_NAME="Debug">
+    <configuration name="e" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="e" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="efm32-test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="efm32-test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="efm32-test" RUN_TARGET_NAME="efm32-test">
+    <configuration name="efm32-test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="efm32-test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="efm32-test" RUN_TARGET_NAME="efm32-test">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="emlib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="emlib" CONFIG_NAME="Debug">
+    <configuration name="emlib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="emlib" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="erase" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="erase" CONFIG_NAME="Debug">
+    <configuration name="erase" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="erase" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="f" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="f" CONFIG_NAME="Debug">
+    <configuration name="f" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="f" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="flash" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="flash" CONFIG_NAME="Debug">
+    <configuration name="flash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="flash" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="r" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="r" CONFIG_NAME="Debug">
+    <configuration name="r" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="r" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="reset" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="reset" CONFIG_NAME="Debug">
+    <configuration name="reset" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="efm32-test" TARGET_NAME="reset" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -258,6 +267,7 @@
       <item itemvalue="CMake Application.reset" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -280,6 +290,7 @@
       <workItem from="1556140697600" duration="588000" />
       <workItem from="1556141481941" duration="1115000" />
       <workItem from="1556148904740" duration="79000" />
+      <workItem from="1609889792808" duration="55000" />
     </task>
     <servers />
   </component>
@@ -326,7 +337,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/graphics/glib.c" />

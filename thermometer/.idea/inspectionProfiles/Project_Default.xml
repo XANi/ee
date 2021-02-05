@@ -2,7 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="EndlessLoop" enabled="true" level="WARNING" enabled_by_default="true">
-      <scope name="main" level="UNUSED ENTRY" enabled="true" />
+      <scope name="main" level="Ignore" enabled="true" />
     </inspection_tool>
   </profile>
 </component>
