@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_ST_STM32F3:STM32F373VCTx U1
-U 1 1 6012E3F2
-P 3350 3625
-F 0 "U1" H 3350 836 50  0000 C CNN
-F 1 "STM32F373VCTx" H 3350 745 50  0000 C CNN
-F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 2650 1125 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00046749.pdf" H 3350 3625 50  0001 C CNN
-	1    3350 3625
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x20_Odd_Even J2
 U 1 1 6013835A
 P 1100 2300
@@ -112,342 +101,104 @@ F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 7450 850 50  0001 C CNN
 	1    7350 1100
 	1    0    0    -1  
 $EndComp
-Text GLabel 2350 2825 0    50   Input ~ 0
-PE0
-Text GLabel 2350 2925 0    50   Input ~ 0
-PE1
-Text GLabel 2350 3025 0    50   Input ~ 0
-PE2
-Text GLabel 2350 3125 0    50   Input ~ 0
-PE3
-Text GLabel 2350 3225 0    50   Input ~ 0
-PE4
-Text GLabel 2350 3325 0    50   Input ~ 0
-PE5
-Text GLabel 2350 3425 0    50   Input ~ 0
-PE6
-Text GLabel 2350 3525 0    50   Input ~ 0
-PE7
-Text GLabel 2350 3625 0    50   Input ~ 0
+Text GLabel 2400 2350 0    50   Input ~ 0
 PE8
-Text GLabel 2350 3725 0    50   Input ~ 0
+Text GLabel 2400 2450 0    50   Input ~ 0
 PE9
-Text GLabel 2350 3825 0    50   Input ~ 0
-PE10
-Text GLabel 2350 3925 0    50   Input ~ 0
-PE11
-Text GLabel 2350 4025 0    50   Input ~ 0
-PE12
-Text GLabel 2350 4125 0    50   Input ~ 0
-PE13
-Text GLabel 2350 4225 0    50   Input ~ 0
-PE14
-Text GLabel 2350 4325 0    50   Input ~ 0
-PE15
-Text GLabel 2350 4525 0    50   Input ~ 0
-PD0
-Text GLabel 2350 4625 0    50   Input ~ 0
-PD1
-Text GLabel 2350 4725 0    50   Input ~ 0
-PD2
-Text GLabel 2350 4825 0    50   Input ~ 0
-PD3
-Text GLabel 2350 4925 0    50   Input ~ 0
-PD4
-Text GLabel 2350 5025 0    50   Input ~ 0
-PD5
-Text GLabel 2350 5125 0    50   Input ~ 0
-PD6
-Text GLabel 2350 5225 0    50   Input ~ 0
-PD7
-Text GLabel 2350 5325 0    50   Input ~ 0
-PD8
-Text GLabel 2350 5425 0    50   Input ~ 0
-PD9
-Text GLabel 2350 5525 0    50   Input ~ 0
-PD10
-Text GLabel 2350 5625 0    50   Input ~ 0
-PD11
-Text GLabel 2350 5725 0    50   Input ~ 0
-PD12
-Text GLabel 2350 5825 0    50   Input ~ 0
-PD13
-Text GLabel 2350 5925 0    50   Input ~ 0
-PD14
-Text GLabel 2350 6025 0    50   Input ~ 0
-PD15
-Text GLabel 4375 4525 2    50   Input ~ 0
+Text GLabel 2400 2950 0    50   Input ~ 0
 PC0
-Text GLabel 4375 4625 2    50   Input ~ 0
+Text GLabel 2400 3050 0    50   Input ~ 0
 PC1
-Text GLabel 4375 4725 2    50   Input ~ 0
+Text GLabel 2400 3150 0    50   Input ~ 0
 PC2
-Text GLabel 4375 4825 2    50   Input ~ 0
+Text GLabel 2400 3250 0    50   Input ~ 0
 PC3
-Text GLabel 4375 4925 2    50   Input ~ 0
+Text GLabel 2400 3350 0    50   Input ~ 0
 PC4
-Text GLabel 4375 5025 2    50   Input ~ 0
+Text GLabel 2400 3450 0    50   Input ~ 0
 PC5
-Text GLabel 4375 5125 2    50   Input ~ 0
+Text GLabel 2400 3550 0    50   Input ~ 0
 PC6
-Text GLabel 4375 5225 2    50   Input ~ 0
+Text GLabel 2400 3650 0    50   Input ~ 0
 PC7
-Text GLabel 4375 5325 2    50   Input ~ 0
+Text GLabel 2400 3750 0    50   Input ~ 0
 PC8
-Text GLabel 4375 5425 2    50   Input ~ 0
+Text GLabel 2400 3850 0    50   Input ~ 0
 PC9
-Text GLabel 4375 5525 2    50   Input ~ 0
+Text GLabel 2400 3950 0    50   Input ~ 0
 PC10
-Text GLabel 4375 5625 2    50   Input ~ 0
+Text GLabel 2400 4050 0    50   Input ~ 0
 PC11
-Text GLabel 4375 5725 2    50   Input ~ 0
+Text GLabel 2400 4150 0    50   Input ~ 0
 PC12
-Text GLabel 4375 5825 2    50   Input ~ 0
+Text GLabel 2400 4250 0    50   Input ~ 0
 PC13
-Text GLabel 4375 5925 2    50   Input ~ 0
+Text GLabel 2400 4350 0    50   Input ~ 0
 PC14
-Text GLabel 4375 6025 2    50   Input ~ 0
+Text GLabel 2400 4450 0    50   Input ~ 0
 PC15
-Text GLabel 4375 3125 2    50   Input ~ 0
+Text GLabel 3800 3350 2    50   Input ~ 0
 PB0
-Text GLabel 4375 3225 2    50   Input ~ 0
+Text GLabel 3800 3450 2    50   Input ~ 0
 PB1
-Text GLabel 4375 3325 2    50   Input ~ 0
+Text GLabel 3800 3550 2    50   Input ~ 0
 PB2
-Text GLabel 4375 3425 2    50   Input ~ 0
+Text GLabel 3800 3650 2    50   Input ~ 0
 PB3
-Text GLabel 4375 3525 2    50   Input ~ 0
+Text GLabel 3800 3750 2    50   Input ~ 0
 PB4
-Text GLabel 4375 3625 2    50   Input ~ 0
+Text GLabel 3800 3850 2    50   Input ~ 0
 PB5
-Text GLabel 4375 3725 2    50   Input ~ 0
-PB6
-Text GLabel 4375 3825 2    50   Input ~ 0
+Text GLabel 3800 4050 2    50   Input ~ 0
 PB7
-Text GLabel 4375 3925 2    50   Input ~ 0
+Text GLabel 3800 4150 2    50   Input ~ 0
 PB8
-Text GLabel 4375 4025 2    50   Input ~ 0
+Text GLabel 3800 4250 2    50   Input ~ 0
 PB9
-Text GLabel 4375 4125 2    50   Input ~ 0
-PB10
-Text GLabel 4375 4225 2    50   Input ~ 0
+Text GLabel 3800 4350 2    50   Input ~ 0
 PB14
-Text GLabel 4375 4325 2    50   Input ~ 0
+Text GLabel 3800 4450 2    50   Input ~ 0
 PB15
-Text GLabel 4375 1425 2    50   Input ~ 0
+Text GLabel 3800 1650 2    50   Input ~ 0
 PA0
-Text GLabel 4375 1525 2    50   Input ~ 0
+Text GLabel 3800 1750 2    50   Input ~ 0
 PA1
-Text GLabel 4375 1625 2    50   Input ~ 0
+Text GLabel 3800 1850 2    50   Input ~ 0
 PA2
-Text GLabel 4375 1725 2    50   Input ~ 0
+Text GLabel 3800 1950 2    50   Input ~ 0
 PA3
-Text GLabel 4375 1825 2    50   Input ~ 0
+Text GLabel 3800 2050 2    50   Input ~ 0
 PA4
-Text GLabel 4375 1925 2    50   Input ~ 0
+Text GLabel 3800 2150 2    50   Input ~ 0
 PA5
-Text GLabel 4375 2025 2    50   Input ~ 0
+Text GLabel 3800 2250 2    50   Input ~ 0
 PA6
-Text GLabel 4375 2125 2    50   Input ~ 0
+Text GLabel 3800 2350 2    50   Input ~ 0
 PA7
-Text GLabel 4375 2225 2    50   Input ~ 0
+Text GLabel 3800 2450 2    50   Input ~ 0
 PA8
-Text GLabel 4375 2325 2    50   Input ~ 0
+Text GLabel 3800 2550 2    50   Input ~ 0
 PA9
-Text GLabel 4375 2425 2    50   Input ~ 0
+Text GLabel 3800 2650 2    50   Input ~ 0
 PA10
-Text GLabel 4375 2525 2    50   Input ~ 0
+Text GLabel 3800 2750 2    50   Input ~ 0
 PA11
-Text GLabel 4375 2625 2    50   Input ~ 0
+Text GLabel 3800 2850 2    50   Input ~ 0
 PA12
-Text GLabel 4375 2725 2    50   Input ~ 0
+Text GLabel 3800 2950 2    50   Input ~ 0
 PA13
-Text GLabel 4375 2825 2    50   Input ~ 0
+Text GLabel 3800 3050 2    50   Input ~ 0
 PA14
-Text GLabel 4375 2925 2    50   Input ~ 0
+Text GLabel 3800 3150 2    50   Input ~ 0
 PA15
-Text GLabel 2350 2025 0    50   Input ~ 0
+Text GLabel 2400 1850 0    50   Input ~ 0
 PF0
-Text GLabel 2350 2125 0    50   Input ~ 0
+Text GLabel 2400 1950 0    50   Input ~ 0
 PF1
-Text GLabel 2350 2225 0    50   Input ~ 0
-PF2
-Text GLabel 2350 2325 0    50   Input ~ 0
-PF4
-Text GLabel 2350 2425 0    50   Input ~ 0
+Text GLabel 2400 2150 0    50   Input ~ 0
+PF7
+Text GLabel 2400 2050 0    50   Input ~ 0
 PF6
-Text GLabel 2350 2525 0    50   Input ~ 0
-PF9
-Text GLabel 2350 2625 0    50   Input ~ 0
-PF10
-Wire Wire Line
-	2350 2025 2450 2025
-Wire Wire Line
-	2350 2125 2450 2125
-Wire Wire Line
-	2350 2225 2450 2225
-Wire Wire Line
-	2350 2325 2450 2325
-Wire Wire Line
-	2350 2425 2450 2425
-Wire Wire Line
-	2350 2525 2450 2525
-Wire Wire Line
-	2350 2625 2450 2625
-Wire Wire Line
-	2450 2825 2350 2825
-Wire Wire Line
-	2450 2925 2350 2925
-Wire Wire Line
-	2450 3025 2350 3025
-Wire Wire Line
-	2450 3125 2350 3125
-Wire Wire Line
-	2450 3225 2350 3225
-Wire Wire Line
-	2450 3325 2350 3325
-Wire Wire Line
-	2450 3425 2350 3425
-Wire Wire Line
-	2450 3525 2350 3525
-Wire Wire Line
-	2450 3625 2350 3625
-Wire Wire Line
-	2450 3725 2350 3725
-Wire Wire Line
-	2450 3825 2350 3825
-Wire Wire Line
-	2450 3925 2350 3925
-Wire Wire Line
-	2450 4025 2350 4025
-Wire Wire Line
-	2450 4125 2350 4125
-Wire Wire Line
-	2450 4225 2350 4225
-Wire Wire Line
-	2450 4325 2350 4325
-Wire Wire Line
-	2450 4525 2350 4525
-Wire Wire Line
-	2450 4625 2350 4625
-Wire Wire Line
-	2450 4725 2350 4725
-Wire Wire Line
-	2450 4825 2350 4825
-Wire Wire Line
-	2450 4925 2350 4925
-Wire Wire Line
-	2450 5025 2350 5025
-Wire Wire Line
-	2450 5125 2350 5125
-Wire Wire Line
-	2450 5225 2350 5225
-Wire Wire Line
-	2450 5325 2350 5325
-Wire Wire Line
-	2450 5425 2350 5425
-Wire Wire Line
-	2450 5525 2350 5525
-Wire Wire Line
-	2450 5625 2350 5625
-Wire Wire Line
-	2450 5725 2350 5725
-Wire Wire Line
-	2450 5825 2350 5825
-Wire Wire Line
-	2450 5925 2350 5925
-Wire Wire Line
-	2450 6025 2350 6025
-Wire Wire Line
-	4250 6025 4375 6025
-Wire Wire Line
-	4250 5925 4375 5925
-Wire Wire Line
-	4250 5825 4375 5825
-Wire Wire Line
-	4250 5725 4375 5725
-Wire Wire Line
-	4250 5625 4375 5625
-Wire Wire Line
-	4250 5525 4375 5525
-Wire Wire Line
-	4250 5425 4375 5425
-Wire Wire Line
-	4250 5325 4375 5325
-Wire Wire Line
-	4250 5225 4375 5225
-Wire Wire Line
-	4250 5125 4375 5125
-Wire Wire Line
-	4250 5025 4375 5025
-Wire Wire Line
-	4250 4925 4375 4925
-Wire Wire Line
-	4250 4825 4375 4825
-Wire Wire Line
-	4250 4725 4375 4725
-Wire Wire Line
-	4250 4625 4375 4625
-Wire Wire Line
-	4250 4525 4375 4525
-Wire Wire Line
-	4250 4325 4375 4325
-Wire Wire Line
-	4250 4225 4375 4225
-Wire Wire Line
-	4250 4125 4375 4125
-Wire Wire Line
-	4250 4025 4375 4025
-Wire Wire Line
-	4250 3925 4375 3925
-Wire Wire Line
-	4250 3825 4375 3825
-Wire Wire Line
-	4250 3725 4375 3725
-Wire Wire Line
-	4250 3625 4375 3625
-Wire Wire Line
-	4250 3525 4375 3525
-Wire Wire Line
-	4250 3425 4375 3425
-Wire Wire Line
-	4250 3325 4375 3325
-Wire Wire Line
-	4250 3225 4375 3225
-Wire Wire Line
-	4250 3125 4375 3125
-Wire Wire Line
-	4250 1425 4375 1425
-Wire Wire Line
-	4250 1525 4375 1525
-Wire Wire Line
-	4250 1625 4375 1625
-Wire Wire Line
-	4250 1725 4375 1725
-Wire Wire Line
-	4250 1825 4375 1825
-Wire Wire Line
-	4250 1925 4375 1925
-Wire Wire Line
-	4250 2025 4375 2025
-Wire Wire Line
-	4250 2125 4375 2125
-Wire Wire Line
-	4250 2225 4375 2225
-Wire Wire Line
-	4250 2325 4375 2325
-Wire Wire Line
-	4250 2425 4375 2425
-Wire Wire Line
-	4250 2525 4375 2525
-Wire Wire Line
-	4250 2625 4375 2625
-Wire Wire Line
-	4250 2725 4375 2725
-Wire Wire Line
-	4250 2825 4375 2825
-Wire Wire Line
-	4250 2925 4375 2925
 $Comp
 L Device:Crystal Y1
 U 1 1 60237237
@@ -525,7 +276,7 @@ Connection ~ 6850 3900
 Wire Wire Line
 	6250 3900 6425 3900
 Connection ~ 6425 3900
-Text GLabel 3350 925  1    50   Input ~ 0
+Text GLabel 3200 950  1    50   Input ~ 0
 3v3
 $Comp
 L power:GND #PWR0103
@@ -609,13 +360,11 @@ Text GLabel 6875 1100 0    50   Input ~ 0
 5v
 Wire Wire Line
 	6875 1100 7050 1100
-Text GLabel 3450 925  1    50   Input ~ 0
-3v3
 Wire Wire Line
 	7875 1100 7650 1100
-Text GLabel 3250 925  1    50   Input ~ 0
+Text GLabel 3100 950  1    50   Input ~ 0
 3v3
-Text GLabel 3150 925  1    50   Input ~ 0
+Text GLabel 3000 950  1    50   Input ~ 0
 3v3
 $Comp
 L Device:L L1
@@ -656,13 +405,11 @@ Wire Wire Line
 	7850 3250 7675 3250
 Text GLabel 7875 1100 2    50   Input ~ 0
 3v3
-Text GLabel 8450 3250 2    50   Input ~ 0
+Text GLabel 8875 3250 2    50   Input ~ 0
 3v3
 Text GLabel 7325 3250 0    50   Input ~ 0
 3v3a
 Connection ~ 7675 3250
-Wire Wire Line
-	8450 3250 8350 3250
 Connection ~ 8350 3250
 $Comp
 L power:GND #PWR0106
@@ -679,7 +426,7 @@ Wire Wire Line
 	8350 3750 8350 3625
 Wire Wire Line
 	7675 3750 7675 3625
-Text GLabel 3550 925  1    50   Input ~ 0
+Text GLabel 3300 950  1    50   Input ~ 0
 3v3a
 $Comp
 L power:GNDA #PWR0107
@@ -759,23 +506,23 @@ Text GLabel 1400 1400 2    50   Input ~ 0
 $Comp
 L power:GND #PWR0110
 U 1 1 60137C23
-P 3250 6650
-F 0 "#PWR0110" H 3250 6400 50  0001 C CNN
-F 1 "GND" H 3255 6477 50  0000 C CNN
-F 2 "" H 3250 6650 50  0001 C CNN
-F 3 "" H 3250 6650 50  0001 C CNN
-	1    3250 6650
+P 3100 5050
+F 0 "#PWR0110" H 3100 4800 50  0001 C CNN
+F 1 "GND" H 3105 4877 50  0000 C CNN
+F 2 "" H 3100 5050 50  0001 C CNN
+F 3 "" H 3100 5050 50  0001 C CNN
+	1    3100 5050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDA #PWR0111
 U 1 1 6013A20A
-P 3450 6650
-F 0 "#PWR0111" H 3450 6400 50  0001 C CNN
-F 1 "GNDA" H 3455 6477 50  0000 C CNN
-F 2 "" H 3450 6650 50  0001 C CNN
-F 3 "" H 3450 6650 50  0001 C CNN
-	1    3450 6650
+P 3200 5050
+F 0 "#PWR0111" H 3200 4800 50  0001 C CNN
+F 1 "GNDA" H 3205 4877 50  0000 C CNN
+F 2 "" H 3200 5050 50  0001 C CNN
+F 3 "" H 3200 5050 50  0001 C CNN
+	1    3200 5050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -796,7 +543,7 @@ Wire Wire Line
 Connection ~ 3450 6575
 Wire Wire Line
 	3450 6575 3450 6325
-Text GLabel 3650 925  1    50   Input ~ 0
+Text GLabel 3400 950  1    50   Input ~ 0
 3v3a
 Text GLabel 3750 925  1    50   Input ~ 0
 3v3a
@@ -844,19 +591,12 @@ F 3 "~" H 7900 4425 50  0001 C CNN
 	1    7900 4425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7900 4575 7900 4625
 Text GLabel 7800 4275 0    50   Input ~ 0
 3v3a
 Wire Wire Line
 	7800 4275 7900 4275
-Text GLabel 7725 4625 0    50   Input ~ 0
+Text GLabel 7450 4625 0    50   Input ~ 0
 Ref2v5
-Wire Wire Line
-	7900 4625 7725 4625
-Connection ~ 7900 4625
-Wire Wire Line
-	7900 4625 7900 4675
 $Comp
 L power:GNDA #PWR0112
 U 1 1 601D6040
@@ -870,7 +610,7 @@ F 3 "" H 7900 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7900 5050 7900 4975
-Text GLabel 2175 1625 0    50   Input ~ 0
+Text GLabel 2275 1550 0    50   Input ~ 0
 Ref2v5
 $Comp
 L power:GNDA #PWR0113
@@ -883,19 +623,6 @@ F 3 "" H 2150 1825 50  0001 C CNN
 	1    2150 1825
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2450 1825 2150 1825
-Wire Wire Line
-	2450 1725 2275 1725
-Wire Wire Line
-	2175 1725 2175 1625
-Wire Wire Line
-	2450 1625 2275 1625
-Wire Wire Line
-	2275 1625 2275 1725
-Connection ~ 2275 1725
-Wire Wire Line
-	2275 1725 2175 1725
 $Comp
 L power:GND #PWR0109
 U 1 1 603B3739
@@ -907,24 +634,6 @@ F 3 "" H 900 1400 50  0001 C CNN
 	1    900  1400
 	0    1    1    0   
 $EndComp
-Text GLabel 1400 1500 2    50   Input ~ 0
-PA1
-Text GLabel 900  1600 0    50   Input ~ 0
-PA2
-Text GLabel 1400 1600 2    50   Input ~ 0
-PA0
-Text GLabel 900  1700 0    50   Input ~ 0
-PA3
-Text GLabel 1400 1700 2    50   Input ~ 0
-PF4
-Text GLabel 900  1800 0    50   Input ~ 0
-PA4
-Text GLabel 1400 1800 2    50   Input ~ 0
-PA5
-Text GLabel 900  1900 0    50   Input ~ 0
-PA6
-Text GLabel 1400 1900 2    50   Input ~ 0
-PA7
 $Comp
 L Connector:Conn_01x04_Male J4
 U 1 1 602527FA
@@ -967,4 +676,178 @@ Wire Wire Line
 	8750 3000 8700 3000
 Wire Wire Line
 	8750 2900 8700 2900
+$Comp
+L MCU_ST_STM32F3:STM32F373RCTx U1
+U 1 1 602E0BEA
+P 3100 2750
+F 0 "U1" H 3100 761 50  0000 C CNN
+F 1 "STM32F373RCTx" H 3100 670 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 2500 950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00046749.pdf" H 3100 2750 50  0001 C CNN
+	1    3100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5050 3100 4650
+Wire Wire Line
+	3200 4650 3200 4750
+Wire Wire Line
+	3200 4750 3300 4750
+Wire Wire Line
+	3300 4750 3300 4650
+Connection ~ 3200 4750
+Wire Wire Line
+	3200 4750 3200 5050
+Text GLabel 3800 3950 2    50   Input ~ 0
+PB6
+Wire Wire Line
+	2275 1550 2350 1550
+Wire Wire Line
+	2400 1650 2350 1650
+Wire Wire Line
+	2350 1650 2350 1550
+Connection ~ 2350 1550
+Wire Wire Line
+	2350 1550 2400 1550
+Text GLabel 1375 3825 2    50   Input ~ 0
+PB9
+Text GLabel 1375 3925 2    50   Input ~ 0
+PB8
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 6051583D
+P 4050 1200
+F 0 "J5" H 4158 1381 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4158 1290 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4050 1200 50  0001 C CNN
+F 3 "~" H 4050 1200 50  0001 C CNN
+	1    4050 1200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2400 1150 0    50   Input ~ 0
+NRST
+Text GLabel 2400 1350 0    50   Input ~ 0
+BOOT0
+Text GLabel 4250 1300 2    50   Input ~ 0
+NRST
+Text GLabel 4250 1200 2    50   Input ~ 0
+BOOT0
+Text GLabel 1400 1900 2    50   Input ~ 0
+PA0
+Text GLabel 900  2000 0    50   Input ~ 0
+PA1
+Text GLabel 1400 2000 2    50   Input ~ 0
+PA2
+Text GLabel 900  2100 0    50   Input ~ 0
+PA3
+Text GLabel 1400 1500 2    50   Input ~ 0
+Ref2v5
+Text GLabel 2400 2650 0    50   Input ~ 0
+PD2
+Text GLabel 2400 2750 0    50   Input ~ 0
+PD8
+Text GLabel 900  1600 0    50   Input ~ 0
+PC13
+Text GLabel 1400 1600 2    50   Input ~ 0
+PC14
+Text GLabel 900  1700 0    50   Input ~ 0
+PC15
+Text GLabel 1400 1700 2    50   Input ~ 0
+PC0
+Text GLabel 900  1800 0    50   Input ~ 0
+PC1
+Text GLabel 1400 1800 2    50   Input ~ 0
+PC2
+Text GLabel 900  1900 0    50   Input ~ 0
+PC3
+Text GLabel 1400 2100 2    50   Input ~ 0
+PA4
+Text GLabel 900  2200 0    50   Input ~ 0
+PA5
+Text GLabel 1400 2200 2    50   Input ~ 0
+PA6
+Text GLabel 900  2300 0    50   Input ~ 0
+PA7
+Text GLabel 1400 2300 2    50   Input ~ 0
+PC4
+Text GLabel 900  2400 0    50   Input ~ 0
+PC5
+Text GLabel 1400 2400 2    50   Input ~ 0
+PB0
+Text GLabel 900  2500 0    50   Input ~ 0
+PB1
+Text GLabel 1400 2500 2    50   Input ~ 0
+PB2
+Text GLabel 900  2600 0    50   Input ~ 0
+PE8
+Text GLabel 1400 2600 2    50   Input ~ 0
+PE9
+$Comp
+L Device:C C7
+U 1 1 6021A29B
+P 8750 3400
+F 0 "C7" H 8865 3446 50  0000 L CNN
+F 1 "10n" H 8865 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8788 3250 50  0001 C CNN
+F 3 "~" H 8750 3400 50  0001 C CNN
+	1    8750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3250 8750 3250
+Connection ~ 8750 3250
+Wire Wire Line
+	8750 3250 8875 3250
+Wire Wire Line
+	8750 3550 8750 3625
+Wire Wire Line
+	8750 3625 8350 3625
+$Comp
+L Device:C C6
+U 1 1 6022C963
+P 7650 4850
+F 0 "C6" H 7400 4875 50  0000 L CNN
+F 1 "10n" H 7400 4800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7688 4700 50  0001 C CNN
+F 3 "~" H 7650 4850 50  0001 C CNN
+	1    7650 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4575 7900 4625
+Wire Wire Line
+	7900 5050 7650 5050
+Wire Wire Line
+	7650 5050 7650 5000
+Connection ~ 7900 5050
+Wire Wire Line
+	7450 4625 7650 4625
+Connection ~ 7900 4625
+Wire Wire Line
+	7900 4625 7900 4675
+Wire Wire Line
+	7650 4700 7650 4625
+Connection ~ 7650 4625
+Wire Wire Line
+	7650 4625 7900 4625
+Text GLabel 875  3925 0    50   Input ~ 0
+PB3
+Text GLabel 1375 4025 2    50   Input ~ 0
+PD2
+Text GLabel 875  4025 0    50   Input ~ 0
+PC12
+Text GLabel 1375 4125 2    50   Input ~ 0
+PC11
+Text GLabel 875  4125 0    50   Input ~ 0
+PC10
+Text GLabel 1375 4225 2    50   Input ~ 0
+PA15
+Text GLabel 875  4225 0    50   Input ~ 0
+PB4
+Text GLabel 1375 4325 2    50   Input ~ 0
+PB5
+Text GLabel 875  4325 0    50   Input ~ 0
+PB6
+Text GLabel 1375 4425 2    50   Input ~ 0
+PB7
 $EndSCHEMATC
