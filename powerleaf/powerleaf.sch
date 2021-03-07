@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:powerleaf-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -215,8 +214,6 @@ Wire Wire Line
 	2825 1350 2825 1150
 Wire Wire Line
 	2825 1150 2775 1150
-Text Label 1000 675  0    50   ~ 0
-Vin
 Text Label 4025 1250 0    50   ~ 0
 Vsw
 Text Label 6200 1250 0    50   ~ 0
@@ -225,7 +222,7 @@ Text Label 4025 1550 0    50   ~ 0
 Vfb
 Text GLabel 6150 1225 1    50   Input ~ 0
 3.3V
-Text GLabel 950  750  3    50   Input ~ 0
+Text GLabel 1175 675  3    50   Input ~ 0
 Vin
 $Comp
 L Connector_Generic:Conn_01x03 J3
@@ -294,7 +291,7 @@ Wire Wire Line
 Wire Wire Line
 	4225 1250 4575 1250
 Wire Wire Line
-	4775 1250 5000 1250
+	4775 1250 4925 1250
 Connection ~ 4775 1250
 Wire Wire Line
 	5000 1250 5000 1450
@@ -443,19 +440,6 @@ F 3 "" H 2725 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Polyfuse_Small F1
-U 1 1 5C060737
-P 1150 675
-F 0 "F1" V 945 675 50  0000 C CNN
-F 1 "100na" V 1036 675 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" H 1200 475 50  0001 L CNN
-F 3 "~" H 1150 675 50  0001 C CNN
-	1    1150 675 
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	825  675  950  675 
-$Comp
 L power:GND #PWR?
 U 1 1 5C063A3A
 P 4575 1550
@@ -508,12 +492,7 @@ Wire Wire Line
 	825  875  825  775 
 Wire Wire Line
 	6600 1250 6400 1250
-Wire Wire Line
-	950  750  950  675 
 Connection ~ 6400 1250
-Connection ~ 950  675 
-Wire Wire Line
-	950  675  1050 675 
 Text Label 2675 1125 0    50   ~ 0
 Vcap
 Wire Wire Line
@@ -561,4 +540,132 @@ F 3 "" H 1775 2350 50  0001 C CNN
 	1    1775 2350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 60460D3C
+P 1700 1250
+F 0 "C8" H 1525 1250 50  0000 L CNN
+F 1 "100n" H 1500 1175 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1700 1250 50  0001 C CNN
+F 3 "~" H 1700 1250 50  0001 C CNN
+	1    1700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604618DA
+P 1700 1350
+AR Path="/5B70BF95/604618DA" Ref="#PWR?"  Part="1" 
+AR Path="/604618DA" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 1700 1100 50  0001 C CNN
+F 1 "GND" H 1705 1177 50  0000 C CNN
+F 2 "" H 1700 1350 50  0001 C CNN
+F 3 "" H 1700 1350 50  0001 C CNN
+	1    1700 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1875 1150 1700 1150
+$Comp
+L Device:C_Small C9
+U 1 1 6046D5DE
+P 4575 900
+F 0 "C9" H 4675 875 50  0000 L CNN
+F 1 "10uF" H 4600 800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4575 900 50  0001 C CNN
+F 3 "~" H 4575 900 50  0001 C CNN
+	1    4575 900 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 6046DCE7
+P 4825 900
+F 0 "C10" H 4900 875 50  0000 L CNN
+F 1 "10uF" H 4850 800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4825 900 50  0001 C CNN
+F 3 "~" H 4825 900 50  0001 C CNN
+	1    4825 900 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4825 1000 4925 1000
+Wire Wire Line
+	4925 1000 4925 1250
+Connection ~ 4925 1250
+Wire Wire Line
+	4925 1250 5000 1250
+Wire Wire Line
+	4825 1000 4575 1000
+Connection ~ 4825 1000
+$Comp
+L power:GND #PWR?
+U 1 1 604723C1
+P 4675 700
+AR Path="/5B70BF95/604723C1" Ref="#PWR?"  Part="1" 
+AR Path="/604723C1" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 4675 450 50  0001 C CNN
+F 1 "GND" H 4680 527 50  0000 C CNN
+F 2 "" H 4675 700 50  0001 C CNN
+F 3 "" H 4675 700 50  0001 C CNN
+	1    4675 700 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4575 800  4575 700 
+Wire Wire Line
+	4575 700  4675 700 
+Wire Wire Line
+	4675 700  4825 700 
+Wire Wire Line
+	4825 700  4825 800 
+Connection ~ 4675 700 
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 5C060737
+P 1025 675
+F 0 "F1" V 820 675 50  0000 C CNN
+F 1 "100na" V 911 675 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" H 1075 475 50  0001 L CNN
+F 3 "~" H 1025 675 50  0001 C CNN
+	1    1025 675 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1125 675  1250 675 
+Wire Wire Line
+	825  675  875  675 
+$Comp
+L Device:SPARK_GAP E1
+U 1 1 604AA4BD
+P 1075 1125
+F 0 "E1" V 1029 1178 50  0000 L CNN
+F 1 "SPARK_GAP" V 1120 1178 50  0000 L CNN
+F 2 "0_eurocad:SparkGap-0.3mm" H 1075 1055 50  0001 C CNN
+F 3 "~" V 1075 1125 50  0001 C CNN
+	1    1075 1125
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604AB475
+P 1075 1325
+AR Path="/5B70BF95/604AB475" Ref="#PWR?"  Part="1" 
+AR Path="/604AB475" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 1075 1075 50  0001 C CNN
+F 1 "GND" H 1080 1152 50  0000 C CNN
+F 2 "" H 1075 1325 50  0001 C CNN
+F 3 "" H 1075 1325 50  0001 C CNN
+	1    1075 1325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1075 925  1075 800 
+Wire Wire Line
+	1075 800  875  800 
+Wire Wire Line
+	875  800  875  675 
+Connection ~ 875  675 
+Wire Wire Line
+	875  675  925  675 
 $EndSCHEMATC

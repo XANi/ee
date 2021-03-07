@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:leaflet-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -65,7 +64,7 @@ U 1 1 5B84FC8C
 P 3125 1300
 F 0 "R3" H 3066 1254 50  0000 R CNN
 F 1 "3.3k" H 3066 1345 50  0000 R CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 3125 1300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3125 1300 50  0001 C CNN
 F 3 "~" H 3125 1300 50  0001 C CNN
 	1    3125 1300
 	-1   0    0    1   

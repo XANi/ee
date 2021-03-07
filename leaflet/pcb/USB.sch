@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:leaflet-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -15,9 +14,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:USB_B_Micro J3
+L leaflet-rescue:USB_B_Micro-Connector J3
 U 1 1 5B7C3C46
 P 5050 1450
+AR Path="/5B7C3C46" Ref="J3"  Part="1" 
+AR Path="/5B7C2F15/5B7C3C46" Ref="J3"  Part="1" 
 F 0 "J3" H 4821 1441 50  0000 R CNN
 F 1 "USB_B_Micro" H 4821 1350 50  0000 R CNN
 F 2 "Connectors:USB_Micro-B" H 5200 1400 50  0001 C CNN
@@ -67,7 +68,7 @@ U 1 1 5B7C4286
 P 2950 1000
 F 0 "L2" V 2713 1000 50  0000 C CNN
 F 1 "BLM21PG221" V 2804 1000 50  0000 C CNN
-F 2 "Inductors_SMD:L_0805_HandSoldering" V 2880 1000 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder" V 2880 1000 50  0001 C CNN
 F 3 "~" H 2950 1000 50  0001 C CNN
 	1    2950 1000
 	0    1    1    0   
@@ -83,7 +84,7 @@ U 1 1 5B7C443D
 P 2550 1100
 F 0 "R7" V 2746 1100 50  0000 C CNN
 F 1 "15" V 2655 1100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2550 1100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2550 1100 50  0001 C CNN
 F 3 "~" H 2550 1100 50  0001 C CNN
 	1    2550 1100
 	0    -1   -1   0   
@@ -94,7 +95,7 @@ U 1 1 5B7C4522
 P 2300 1200
 F 0 "R6" V 2496 1200 50  0000 C CNN
 F 1 "15" V 2405 1200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2300 1200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2300 1200 50  0001 C CNN
 F 3 "~" H 2300 1200 50  0001 C CNN
 	1    2300 1200
 	0    -1   -1   0   
@@ -166,7 +167,7 @@ U 1 1 5B7C536F
 P 2050 1400
 F 0 "R5" V 2246 1400 50  0000 C CNN
 F 1 "3.3k" V 2155 1400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2050 1400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2050 1400 50  0001 C CNN
 F 3 "~" H 2050 1400 50  0001 C CNN
 	1    2050 1400
 	0    -1   -1   0   
@@ -178,4 +179,12 @@ Wire Wire Line
 Connection ~ 2150 1200
 Wire Wire Line
 	2150 1200 2200 1200
+Text Label 4225 1100 0    50   ~ 0
+DR+
+Text Label 4250 1200 0    50   ~ 0
+DR-
+Text Label 4425 1000 0    50   ~ 0
+VBUS
+Text Label 1825 1000 0    50   ~ 0
+USB_5V
 $EndSCHEMATC
